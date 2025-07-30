@@ -127,7 +127,7 @@ export default function PhotosPage() {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-6 text-lg font-semibold"
+              className="border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary px-8 py-6 text-lg font-semibold"
             >
               Download Brochure
             </Button>

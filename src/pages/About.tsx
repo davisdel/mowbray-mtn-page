@@ -7,7 +7,7 @@ export default function AboutPage() {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-foreground mb-6">About CommunityPlace</h1>
+          <h1 className="text-5xl font-bold text-foreground mb-6">About Coopers Creek</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             For over two decades, we've been creating exceptional communities where families thrive, 
             friendships flourish, and memories are made to last a lifetime.
@@ -21,7 +21,7 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold text-foreground mb-6">Our Story</h2>
               <div className="space-y-4 text-lg text-muted-foreground">
                 <p>
-                  Founded in 2002, CommunityPlace began with a simple vision: to create residential 
+                  Founded in 2002, Coopers Creek began with a simple vision: to create residential 
                   communities that go beyond just housing – places where people could truly live, 
                   connect, and grow together.
                 </p>
@@ -116,68 +116,7 @@ export default function AboutPage() {
             </Card>
           </div>
         </section>
-
-        {/* Team Section */}
-        <section className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Leadership Team</h2>
-            <p className="text-lg text-muted-foreground">
-              Meet the dedicated professionals behind CommunityPlace
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { name: "Sarah Mitchell", role: "CEO & Founder", experience: "25+ years in real estate development" },
-              { name: "Michael Chen", role: "Head of Design", experience: "15+ years in community planning" },
-              { name: "Jennifer Rodriguez", role: "Community Relations", experience: "20+ years in resident services" }
-            ].map((member, index) => (
-              <Card key={index} className="text-center border-0 bg-card shadow-soft">
-                <CardHeader>
-                  <div className="w-24 h-24 bg-hero-gradient rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-primary-foreground">
-                      {member.name.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  </div>
-                  <CardTitle className="text-xl">{member.name}</CardTitle>
-                  <CardDescription className="text-primary font-semibold">{member.role}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{member.experience}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
-
-        {/* Stats */}
-        <section className="bg-primary text-primary-foreground rounded-2xl p-12">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-4">Our Impact</h2>
-            <p className="text-lg text-primary-foreground/90">
-              Numbers that showcase our commitment to excellence
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold mb-2">50+</div>
-              <div className="text-primary-foreground/80">Communities Built</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">5,000+</div>
-              <div className="text-primary-foreground/80">Happy Families</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">98%</div>
-              <div className="text-primary-foreground/80">Satisfaction Rate</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">25+</div>
-              <div className="text-primary-foreground/80">Awards Won</div>
-            </div>
-          </div>
-        </section>
+        
       </div>
     </div>
   );

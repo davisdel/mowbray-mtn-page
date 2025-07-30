@@ -40,7 +40,7 @@ export default function HomePage() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">
-              Why Choose CommunityPlace?
+              Why Choose Coopers Creek?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Experience the perfect blend of modern amenities, natural beauty, and community spirit.

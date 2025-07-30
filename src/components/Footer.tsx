@@ -15,7 +15,7 @@ export function Footer() {
               </p>
             </div>
             <div className="w-16 h-16 bg-sidebar-primary rounded-lg flex items-center justify-center">
-              <span className="text-sidebar-primary-foreground font-bold text-xl">CP</span>
+              <span className="text-sidebar-primary-foreground font-bold text-xl">CC</span>
             </div>
           </div>
 
@@ -52,15 +52,15 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2 text-sidebar-foreground/70">
                 <Phone className="h-4 w-4" />
-                (555) 123-4567
+                phone number here
               </li>
               <li className="flex items-center gap-2 text-sidebar-foreground/70">
                 <Mail className="h-4 w-4" />
-                info@communityplace.com
+                email here
               </li>
               <li className="flex items-center gap-2 text-sidebar-foreground/70">
                 <MapPin className="h-4 w-4" />
-                123 Community Ave, City, ST 12345
+                address here
               </li>
             </ul>
           </div>

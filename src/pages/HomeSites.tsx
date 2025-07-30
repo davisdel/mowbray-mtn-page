@@ -104,7 +104,7 @@ export default function HomeSitesPage() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <MapPin className="h-6 w-6 text-primary" />
-                Community Layout Map
+                Interactive Community Map
               </CardTitle>
               <CardDescription>
                 Click on any home site marker to view details and availability
@@ -248,7 +248,7 @@ export default function HomeSitesPage() {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-6 text-lg font-semibold"
+              className="border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary px-8 py-6 text-lg font-semibold"
             >
               Download Floor Plans
             </Button>

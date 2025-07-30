@@ -178,67 +178,6 @@ export default function AmenitiesPage() {
           </section>
         ))}
 
-        {/* Operating Hours */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Facility Hours</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="border-0 bg-card shadow-soft">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Dumbbell className="h-5 w-5 text-primary" />
-                  Fitness Center
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-1 text-sm">
-                  <div className="flex justify-between">
-                    <span>Monday - Sunday</span>
-                    <span className="font-medium">24/7</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 bg-card shadow-soft">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Waves className="h-5 w-5 text-primary" />
-                  Pool Area
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-1 text-sm">
-                  <div className="flex justify-between">
-                    <span>Daily</span>
-                    <span className="font-medium">6:00 AM - 10:00 PM</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 bg-card shadow-soft">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Users className="h-5 w-5 text-primary" />
-                  Community Center
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-1 text-sm">
-                  <div className="flex justify-between">
-                    <span>Monday - Saturday</span>
-                    <span className="font-medium">8:00 AM - 10:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sunday</span>
-                    <span className="font-medium">10:00 AM - 8:00 PM</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
         {/* Upcoming Events */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-foreground mb-8">Upcoming Community Events</h2>
