@@ -17,7 +17,7 @@ export default function HomePage() {
         <div
           className='absolute inset-0'
           style={{
-            backgroundImage: `url('/src/images/IMG_2570.jpg')`,
+            backgroundImage: `url('/IMG_2570.jpg')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat'
