@@ -1,172 +1,149 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { 
-  Waves, 
-  Dumbbell, 
-  TreePine, 
-  Car, 
-  Shield, 
-  Wifi, 
-  Baby, 
-  Dog, 
-  Coffee, 
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle
+} from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import {
+  TreePine,
   Calendar,
   Users,
-  Bike
-} from "lucide-react";
+  Fish,
+  Mountain
+} from 'lucide-react'
 
 export default function AmenitiesPage() {
   const amenityCategories = [
     {
-      title: "Recreation & Fitness",
-      icon: Dumbbell,
-      amenities: [
-        {
-          name: "Resort-Style Pool",
-          icon: Waves,
-          description: "Olympic-size swimming pool with cabanas, hot tub, and poolside bar",
-          features: ["Heated year-round", "Lap lanes", "Shallow end for kids", "Pool parties"]
-        },
-        {
-          name: "State-of-the-Art Fitness Center",
-          icon: Dumbbell,
-          description: "24/7 access fitness facility with premium equipment and personal training",
-          features: ["Cardio equipment", "Free weights", "Group classes", "Personal trainers"]
-        },
-        {
-          name: "Tennis & Pickleball Courts",
-          icon: Users,
-          description: "Professional courts for tennis and the increasingly popular pickleball",
-          features: ["Lighted courts", "Equipment rental", "Tournaments", "Lessons available"]
-        }
-      ]
-    },
-    {
-      title: "Family & Community",
-      icon: Baby,
-      amenities: [
-        {
-          name: "Adventure Playground",
-          icon: Baby,
-          description: "Safe, modern playground designed for children of all ages",
-          features: ["Age-appropriate zones", "Rubberized surface", "Shade structures", "Benches for parents"]
-        },
-        {
-          name: "Community Center",
-          icon: Users,
-          description: "Spacious event hall for gatherings, celebrations, and community activities",
-          features: ["Event hosting", "Kitchen facilities", "A/V equipment", "Meeting rooms"]
-        },
-        {
-          name: "Dog Park",
-          icon: Dog,
-          description: "Dedicated off-leash area for pets with separate sections for large and small dogs",
-          features: ["Fenced areas", "Water stations", "Agility equipment", "Waste stations"]
-        }
-      ]
-    },
-    {
-      title: "Outdoor Living",
+      title: 'Outdoor & Adventure',
       icon: TreePine,
       amenities: [
         {
-          name: "Walking & Biking Trails",
-          icon: Bike,
-          description: "Miles of paved trails winding through natural areas and connecting neighborhoods",
-          features: ["Scenic routes", "Distance markers", "Rest areas", "Wildlife viewing"]
-        },
-        {
-          name: "Parks & Green Spaces",
+          name: 'Blue Hole (North Chickamauga Creek Gorge)',
           icon: TreePine,
-          description: "Beautifully landscaped common areas perfect for picnics and relaxation",
-          features: ["Picnic tables", "BBQ grills", "Native plants", "Seasonal flowers"]
+          description:
+            'Scenic natural swimming hole accessed via a short, shaded trail into North Chickamauga Creek Gorge',
+          features: [
+            'About 1 mile round-trip flat hike',
+            'Crystal-clear pools and small cliffs for jumping',
+            'Located a short 11 minute drive from Coopers Creek'
+          ]
         },
         {
-          name: "Outdoor Pavilions",
-          icon: Coffee,
-          description: "Covered outdoor spaces for gatherings and events in any weather",
-          features: ["Weather protection", "Electrical outlets", "Tables & seating", "Event scheduling"]
-        }
-      ]
-    },
-    {
-      title: "Convenience & Security",
-      icon: Shield,
-      amenities: [
-        {
-          name: "24/7 Security",
-          icon: Shield,
-          description: "Gated community with professional security staff and surveillance systems",
-          features: ["Gated access", "Security patrols", "Emergency response", "Visitor management"]
+          name: 'Montlake Golf Course',
+          icon: Users,
+          description:
+            '18-hole mountaintop golf course offering varied terrain and year-round play',
+          features: [
+            'Par 71, 5 850 yards, slope rating about 113',
+            'Rates from $18–$40 depending on time and cart use',
+            'Walking allowed, carts and club rentals available',
+            'Scenic views from Mowbray Mountain'
+          ]
         },
         {
-          name: "Guest Parking",
-          icon: Car,
-          description: "Ample parking areas throughout the community for residents and visitors",
-          features: ["Reserved spots", "Overflow parking", "EV charging", "Well-lit areas"]
+          name: 'Rock Climbing at Stone Fort (Little Rock City)',
+          icon: Mountain,
+          description:
+            'World-class bouldering located adjacent to Montlake Golf in Soddy-Daisy',
+          features: [
+            'Natural sandstone boulder formations',
+            'Suitable for climbers of multiple skill levels',
+            'Outdoor access with no indoor structure',
+            'Well-known regional climbing destination'
+          ]
         },
         {
-          name: "High-Speed Internet",
-          icon: Wifi,
-          description: "Fiber-optic internet infrastructure with premium connectivity options",
-          features: ["Gigabit speeds", "Multiple providers", "Common area WiFi", "Smart home ready"]
+          name: 'Fishing',
+          icon: Fish,
+          description:
+            'Fishing will be available in the community pond',
+          features: [
+            'Full-access private natural area',
+            'Hiking trail down to the pond',
+            'Habitat includes diverse wildlife'
+          ]
+        },
+        {
+          name: 'Pickleball Court',
+          icon: Users,
+          description: 'Standard pickleball court for recreational play',
+          features: [
+            'Flat surfaced court with net',
+            'Suitable for singles or doubles play!'
+          ]
         }
       ]
     }
-  ];
+  ]
 
   const upcomingEvents = [
-    { date: "Mar 15", event: "Community Pool Opening", type: "Seasonal" },
-    { date: "Mar 22", event: "Family Movie Night", type: "Entertainment" },
-    { date: "Apr 5", event: "Tennis Tournament", type: "Sports" },
-    { date: "Apr 12", event: "Spring Garden Workshop", type: "Educational" },
-    { date: "Apr 20", event: "Community BBQ", type: "Social" }
-  ];
+    { date: 'Mar 15', event: 'Community Pool Opening', type: 'Seasonal' },
+    { date: 'Mar 22', event: 'Family Movie Night', type: 'Entertainment' },
+    { date: 'Apr 5', event: 'Tennis Tournament', type: 'Sports' },
+    { date: 'Apr 12', event: 'Spring Garden Workshop', type: 'Educational' },
+    { date: 'Apr 20', event: 'Community BBQ', type: 'Social' }
+  ]
 
   return (
-    <div className="min-h-screen py-12">
-      <div className="container mx-auto px-6">
+    <div className='min-h-screen py-12'>
+      <div className='container mx-auto px-6'>
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-foreground mb-6">Community Amenities</h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Enjoy resort-style living with world-class amenities designed to enhance your lifestyle 
-            and bring neighbors together. From fitness and recreation to relaxation and convenience.
+        <div className='text-center mb-16'>
+          <h1 className='text-5xl font-bold text-foreground mb-6'>
+            Community Amenities
+          </h1>
+          <p className='text-xl text-muted-foreground max-w-3xl mx-auto'>
+            Enjoy resort-style living with world-class amenities designed to
+            enhance your lifestyle and bring neighbors together. From fitness
+            and recreation to relaxation and convenience.
           </p>
         </div>
 
         {/* Amenities by Category */}
         {amenityCategories.map((category, categoryIndex) => (
-          <section key={categoryIndex} className="mb-16">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                <category.icon className="h-6 w-6 text-primary" />
+          <section key={categoryIndex} className='mb-16'>
+            <div className='flex items-center gap-3 mb-8'>
+              <div className='w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center'>
+                <category.icon className='h-6 w-6 text-primary' />
               </div>
-              <h2 className="text-3xl font-bold text-foreground">{category.title}</h2>
+              <h2 className='text-3xl font-bold text-foreground'>
+                {category.title}
+              </h2>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
               {category.amenities.map((amenity, amenityIndex) => (
-                <Card key={amenityIndex} className="shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1">
+                <Card
+                  key={amenityIndex}
+                  className='shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1'>
                   <CardHeader>
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
-                        <amenity.icon className="h-5 w-5 text-accent" />
+                    <div className='flex items-center gap-3 mb-3'>
+                      <div className='w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center'>
+                        <amenity.icon className='h-5 w-5 text-accent' />
                       </div>
-                      <CardTitle className="text-xl">{amenity.name}</CardTitle>
+                      <CardTitle className='text-xl'>{amenity.name}</CardTitle>
                     </div>
-                    <CardDescription className="text-base">
+                    <CardDescription className='text-base'>
                       {amenity.description}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="space-y-2">
-                      <h4 className="font-semibold text-sm text-foreground mb-3">Features:</h4>
-                      <div className="grid grid-cols-1 gap-2">
+                    <div className='space-y-2'>
+                      <h4 className='font-semibold text-sm text-foreground mb-3'>
+                        Features:
+                      </h4>
+                      <div className='grid grid-cols-1 gap-2'>
                         {amenity.features.map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-center gap-2">
-                            <div className="w-2 h-2 bg-primary rounded-full"></div>
-                            <span className="text-sm text-muted-foreground">{feature}</span>
+                          <div
+                            key={featureIndex}
+                            className='flex items-center gap-2'>
+                            <div className='w-2 h-2 bg-primary rounded-full'></div>
+                            <span className='text-sm text-muted-foreground'>
+                              {feature}
+                            </span>
                           </div>
                         ))}
                       </div>
@@ -179,12 +156,14 @@ export default function AmenitiesPage() {
         ))}
 
         {/* Upcoming Events */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Upcoming Community Events</h2>
-          <Card className="shadow-medium">
+        <section className='mb-16'>
+          <h2 className='text-3xl font-bold text-foreground mb-8'>
+            Upcoming Community Events
+          </h2>
+          <Card className='shadow-medium'>
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Calendar className="h-6 w-6 text-primary" />
+              <CardTitle className='flex items-center gap-2'>
+                <Calendar className='h-6 w-6 text-primary' />
                 Community Calendar
               </CardTitle>
               <CardDescription>
@@ -192,18 +171,24 @@ export default function AmenitiesPage() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="space-y-4">
+              <div className='space-y-4'>
                 {upcomingEvents.map((event, index) => (
-                  <div key={index} className="flex items-center justify-between p-4 bg-subtle-gradient rounded-lg">
-                    <div className="flex items-center gap-4">
-                      <div className="text-center">
-                        <div className="text-sm font-semibold text-primary">{event.date}</div>
+                  <div
+                    key={index}
+                    className='flex items-center justify-between p-4 bg-subtle-gradient rounded-lg'>
+                    <div className='flex items-center gap-4'>
+                      <div className='text-center'>
+                        <div className='text-sm font-semibold text-primary'>
+                          {event.date}
+                        </div>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground">{event.event}</h4>
+                        <h4 className='font-semibold text-foreground'>
+                          {event.event}
+                        </h4>
                       </div>
                     </div>
-                    <Badge variant="secondary">{event.type}</Badge>
+                    <Badge variant='secondary'>{event.type}</Badge>
                   </div>
                 ))}
               </div>
@@ -212,22 +197,22 @@ export default function AmenitiesPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-primary text-primary-foreground rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold mb-4">Experience the Lifestyle</h2>
-          <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Ready to enjoy all these amazing amenities? Schedule a tour and see 
+        <section className='bg-primary text-primary-foreground rounded-2xl p-12 text-center'>
+          <h2 className='text-3xl font-bold mb-4'>Experience the Lifestyle</h2>
+          <p className='text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto'>
+            Ready to enjoy all these amazing amenities? Schedule a tour and see
             firsthand what makes our community so special.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg shadow-strong transition-all duration-200">
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <button className='bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg shadow-strong transition-all duration-200'>
               Schedule Community Tour
             </button>
-            <button className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200">
+            <button className='border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200'>
               View Event Calendar
             </button>
           </div>
         </section>
       </div>
     </div>
-  );
+  )
 }
