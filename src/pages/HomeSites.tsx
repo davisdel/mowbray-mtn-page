@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import {
   Card,
   CardContent,
@@ -8,102 +9,55 @@ import {
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { SubdivisionMap as Map } from '@/components/ui/map'
-import { MapPin, Home, Bed, Bath, Square, Eye } from 'lucide-react'
+import {
+  MapPin,
+  Home,
+  Bed,
+  Bath,
+  Square,
+  Eye,
+  ArrowBigDown,
+  ArrowBigUp
+} from 'lucide-react'
 
 export default function HomeSitesPage() {
-  const homeSites = [
+  const initialSites = [
     {
       id: 1,
-      name: 'The Grandview',
-      price: '$485,000',
+      name: '3069 Poe Rd, Soddy Daisy, TN 37379',
+      price: '$775,000',
       bedrooms: 4,
-      bathrooms: 3,
-      sqft: '2,850',
-      lot: '0.25 acres',
+      bathrooms: 4,
+      sqft: '2,932',
+      lot: '1 acre',
       status: 'Available',
-      features: [
-        'Master Suite',
-        'Open Floor Plan',
-        '2-Car Garage',
-        'Covered Patio'
-      ]
+      url: 'https://www.zillow.com/homedetails/3069-Poe-Rd-Soddy-Daisy-TN-37379/444348372_zpid/',
+      img: '99e64b41f7332d76914d3740b622a6f4-cc_ft_768.webp'
     },
     {
       id: 2,
-      name: 'The Willow',
-      price: '$425,000',
-      bedrooms: 3,
-      bathrooms: 2.5,
-      sqft: '2,400',
-      lot: '0.20 acres',
-      status: 'Available',
-      features: [
-        'Split Bedroom Plan',
-        'Island Kitchen',
-        'Study Nook',
-        'Fenced Yard'
-      ]
+      name: '3009 Poe Rd, Soddy Daisy, TN 37379',
+      price: '$689,000',
+      bedrooms: 4,
+      bathrooms: 4,
+      sqft: '2,503',
+      lot: '1.07 acre',
+      status: 'Contingent',
+      url: 'https://www.zillow.com/homedetails/3009-Poe-Rd-Soddy-Daisy-TN-37379/442556057_zpid/',
+      img: '9b2adec5b26d4ba610f61cb157d72a7a-cc_ft_768.webp'
     },
     {
       id: 3,
-      name: 'The Sterling',
-      price: '$565,000',
-      bedrooms: 5,
-      bathrooms: 4,
-      sqft: '3,200',
-      lot: '0.30 acres',
-      status: 'Coming Soon',
-      features: [
-        'Bonus Room',
-        'Dual Master Suites',
-        '3-Car Garage',
-        'Outdoor Kitchen'
-      ]
-    },
-    {
-      id: 4,
-      name: 'The Heritage',
-      price: '$395,000',
-      bedrooms: 3,
-      bathrooms: 2,
-      sqft: '2,100',
-      lot: '0.18 acres',
+      name: '3075 Poe Rd, Soddy Daisy, TN 37379',
+      price: '$90,000',
+      lot: '1.17 acre',
       status: 'Available',
-      features: [
-        'First Floor Master',
-        'Vaulted Ceilings',
-        'Corner Lot',
-        'Garden Space'
-      ]
-    },
-    {
-      id: 5,
-      name: 'The Ashwood',
-      price: '$525,000',
-      bedrooms: 4,
-      bathrooms: 3.5,
-      sqft: '2,950',
-      lot: '0.28 acres',
-      status: 'Reserved',
-      features: [
-        'Home Office',
-        "Butler's Pantry",
-        'Mudroom',
-        'Covered Front Porch'
-      ]
-    },
-    {
-      id: 6,
-      name: 'The Meadowbrook',
-      price: '$445,000',
-      bedrooms: 3,
-      bathrooms: 2.5,
-      sqft: '2,600',
-      lot: '0.22 acres',
-      status: 'Available',
-      features: ['Great Room', 'Walk-in Pantry', 'Laundry Room', 'Deck']
+      url: 'https://www.zillow.com/homedetails/3075-Poe-Rd-Soddy-Daisy-TN-37379/449944369_zpid/',
+      img: '167b51e4c6836708d02afe8fe7a312e0-cc_ft_768.webp'
     }
   ]
+  const [sortMode, setSortMode] = useState<'asc' | 'desc' | '-'>('-')
+  const [homeSites, setHomeSites] = useState(initialSites)
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -170,11 +124,45 @@ export default function HomeSitesPage() {
               Available Homes
             </h2>
             <div className='flex gap-2'>
-              <Button variant='outline' size='sm'>
-                Filter
-              </Button>
-              <Button variant='outline' size='sm'>
-                Sort by Price
+              <Button
+                variant='outline'
+                size='sm'
+                onClick={() => {
+                  let nextMode: '-' | 'asc' | 'desc'
+                  if (sortMode === '-') nextMode = 'asc'
+                  else if (sortMode === 'asc') nextMode = 'desc'
+                  else nextMode = '-'
+                  setSortMode(nextMode)
+                  if (nextMode === '-') {
+                    setHomeSites([...initialSites])
+                  } else {
+                    setHomeSites((prev) => {
+                      const sorted = [...prev].sort((a, b) => {
+                        const priceA =
+                          parseInt((a.price || '').replace(/[^\d]/g, '')) || 0
+                        const priceB =
+                          parseInt((b.price || '').replace(/[^\d]/g, '')) || 0
+                        return nextMode === 'asc'
+                          ? priceA - priceB
+                          : priceB - priceA
+                      })
+                      return sorted
+                    })
+                  }
+                }}>
+                {sortMode === '-' && 'Sort by Price'}
+                {sortMode === 'asc' && (
+                  <span className='flex items-center gap-1'>
+                    Price Low to High{' '}
+                    <ArrowBigUp className='inline-block h-5 w-5 text-black' />
+                  </span>
+                )}
+                {sortMode === 'desc' && (
+                  <span className='flex items-center gap-1'>
+                    Price High to Low{' '}
+                    <ArrowBigDown className='inline-block h-5 w-5 text-black' />
+                  </span>
+                )}
               </Button>
             </div>
           </div>
@@ -185,16 +173,24 @@ export default function HomeSitesPage() {
                 key={home.id}
                 className='shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 group'>
                 <div className='relative'>
-                  <div className='h-48 bg-subtle-gradient flex items-center justify-center'>
-                    <div className='text-center text-muted-foreground group-hover:text-primary transition-colors'>
-                      <Home className='h-12 w-12 mx-auto mb-2' />
-                      <span className='font-medium'>{home.name}</span>
-                    </div>
+                  {/* Home image card */}
+                  <div className='w-full h-48 rounded-t-lg overflow-hidden flex items-center justify-center bg-gray-100'>
+                    <img
+                      src={
+                        home.img.startsWith('http')
+                          ? home.img
+                          : `/${home.img}`
+                      }
+                      alt={home.name}
+                      className='object-cover w-full h-full'
+                    />
                   </div>
-                  <Badge
-                    className={`absolute top-3 right-3 ${getStatusColor(home.status)}`}>
-                    {home.status}
-                  </Badge>
+                  {/* Home info overlay */}
+                  <div className='absolute top-3 right-3'>
+                    <Badge className={getStatusColor(home.status)}>
+                      {home.status}
+                    </Badge>
+                  </div>
                 </div>
 
                 <CardHeader>
@@ -213,15 +209,19 @@ export default function HomeSitesPage() {
                   <div className='grid grid-cols-2 gap-4 text-sm'>
                     <div className='flex items-center gap-2'>
                       <Bed className='h-4 w-4 text-muted-foreground' />
-                      <span>{home.bedrooms} Bedrooms</span>
+                      <span>
+                        {home.bedrooms ? `${home.bedrooms} Bedrooms` : 'N/A'}
+                      </span>
                     </div>
                     <div className='flex items-center gap-2'>
                       <Bath className='h-4 w-4 text-muted-foreground' />
-                      <span>{home.bathrooms} Bathrooms</span>
+                      <span>
+                        {home.bathrooms ? `${home.bathrooms} Bathrooms` : 'N/A'}
+                      </span>
                     </div>
                     <div className='flex items-center gap-2'>
                       <Square className='h-4 w-4 text-muted-foreground' />
-                      <span>{home.sqft} sq ft</span>
+                      <span>{home.sqft ? `${home.sqft} sq ft` : 'N/A'}</span>
                     </div>
                     <div className='flex items-center gap-2'>
                       <MapPin className='h-4 w-4 text-muted-foreground' />
@@ -229,28 +229,9 @@ export default function HomeSitesPage() {
                     </div>
                   </div>
 
-                  {/* Features */}
-                  <div>
-                    <h4 className='font-semibold text-sm text-foreground mb-2'>
-                      Key Features:
-                    </h4>
-                    <div className='flex flex-wrap gap-1'>
-                      {home.features.map((feature, index) => (
-                        <Badge
-                          key={index}
-                          variant='secondary'
-                          className='text-xs'>
-                          {feature}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-
                   {/* Actions */}
                   <div className='flex gap-2 pt-4'>
-                    <Button
-                      className='flex-1'
-                      disabled={home.status === 'Reserved'}>
+                    <Button className='flex-1' href={home.url}>
                       <Eye className='h-4 w-4 mr-2' />
                       View Details
                     </Button>

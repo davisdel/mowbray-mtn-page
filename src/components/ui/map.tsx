@@ -13,6 +13,7 @@ export function SubdivisionMap() {
         viewBox='0 0 1100 350'
         width='1100'
         height='350'
+        style={{ transform: 'rotate(10deg)' }}
         version='1.1'
         id='svg52'
         xmlns='http://www.w3.org/2000/svg'>
@@ -98,8 +99,8 @@ export function SubdivisionMap() {
         <path
           d='m 829.33577,80.55439 -23.29154,129.73392 27.99713,11.74697 23.36175,-135.38274 z'
           style={{ fill: '#CBDF88', stroke: '#4b5563', strokeWidth: 1.51038 }}
-          id='path54'
-          inkscape-label='lot-9'
+          id='lot-9'
+          className='lot'
           sodipodi-nodetypes='ccccc'
         />
         <path

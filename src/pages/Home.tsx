@@ -74,8 +74,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className='text-base'>
-                  Thoughtfully designed homes with modern architecture and
-                  premium finishes throughout.
+                  Thoughtfully designed homes with modern architecture and premium finishes throughout.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -89,8 +88,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className='text-base'>
-                  Join a welcoming community with regular events, activities,
-                  and shared spaces for all ages.
+                  Join a welcoming future community with regular events, activities, and shared spaces for all ages.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -104,8 +102,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className='text-base'>
-                  Sustainable design with abundant green spaces, walking trails,
-                  and eco-friendly features.
+                  Sustainable design with abundant green spaces, walking trails, and eco-friendly features.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -115,12 +112,11 @@ export default function HomePage() {
                 <div className='w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4'>
                   <Shield className='h-8 w-8 text-accent' />
                 </div>
-                <CardTitle className='text-xl'>Safe & Secure</CardTitle>
+                <CardTitle className='text-xl'>Quiet and Peaceful</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className='text-base'>
-                  24/7 security, gated access, and well-lit pathways ensure
-                  peace of mind for your family.
+                  Enjoy the quiet comforts of Cooper's Creek's natural mountain setting.
                 </CardDescription>
               </CardContent>
             </Card>

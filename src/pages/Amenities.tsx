@@ -11,24 +11,68 @@ import {
   Calendar,
   Users,
   Fish,
-  Mountain
+  Mountain,
+  Leaf,
+  Home,
+  Building
 } from 'lucide-react'
 
 export default function AmenitiesPage() {
   const amenityCategories = [
     {
-      title: 'Outdoor & Adventure',
+      title: 'On-Site Amenities',
       icon: TreePine,
       amenities: [
         {
-          name: 'Blue Hole (North Chickamauga Creek Gorge)',
-          icon: TreePine,
+          name: 'Walking Trail',
+          icon: Leaf,
           description:
-            'Scenic natural swimming hole accessed via a short, shaded trail into North Chickamauga Creek Gorge',
+            'Scenic walking trail meandering through the community and natural areas',
           features: [
-            'About 1 mile round-trip flat hike',
-            'Crystal-clear pools and small cliffs for jumping',
-            'Located a short 11 minute drive from Coopers Creek'
+            '1 mile nature trail for taking in the natural surroundings of Mowbray Mountain',
+            'Trail connects all homesites to the pond, pickle ball court and pavilion'
+          ]
+        },
+        {
+          name: 'Fishing',
+          icon: Fish,
+          description: 'Fishing will be available in the community pond',
+          features: [
+            'Full-access private 2 acre natural area',
+            'Benches surrounding waters edge',
+            'Green space for other activities'
+          ]
+        },
+        {
+          name: 'Pickleball Court',
+          icon: Users,
+          description: 'Standard pickleball court for recreational play',
+          features: [
+            'Flat surfaced court with net',
+            'Suitable for singles or doubles play!'
+          ]
+        },
+        {
+          name: 'Pavilion',
+          icon: Home,
+          description: 'Covered outdoor pavilion with seating and BBQ area',
+          features: ['Full size Pavilion', 'Restrooms available']
+        }
+      ]
+    },
+    {
+      title: 'Surrounding Amenities',
+      icon: TreePine,
+      amenities: [
+        {
+          name: 'North Chickamauga Creek Gorge State Park',
+          icon: TreePine,
+          description: 'Natural area with hiking, swimming, and camping',
+          features: [
+            'Blue Hole swimming, offering crystal clear waters and cliffs for jumping',
+            '29 miles of diverse hiking trails - 8 different trails',
+            'Multiple Campsites',
+            'Located just next door to Coopers Creek'
           ]
         },
         {
@@ -56,23 +100,18 @@ export default function AmenitiesPage() {
           ]
         },
         {
-          name: 'Fishing',
-          icon: Fish,
+          name: 'City of Chattanooga',
+          icon: Building,
           description:
-            'Fishing will be available in the community pond',
+            'Vibrant city offering dining, shopping, cultural attractions, and outdoor activities',
           features: [
-            'Full-access private natural area',
-            'Hiking trail down to the pond',
-            'Habitat includes diverse wildlife'
-          ]
-        },
-        {
-          name: 'Pickleball Court',
-          icon: Users,
-          description: 'Standard pickleball court for recreational play',
-          features: [
-            'Flat surfaced court with net',
-            'Suitable for singles or doubles play!'
+            'Chattanooga Zoo & Aquarium',
+            'Rock City Gardens',
+            'Creative Discovery Museum',
+            {
+              text: 'And much more',
+              url: 'https://www.visitchattanooga.com/things-to-do/attractions/'
+            }
           ]
         }
       ]
@@ -114,7 +153,7 @@ export default function AmenitiesPage() {
               </h2>
             </div>
 
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
               {category.amenities.map((amenity, amenityIndex) => (
                 <Card
                   key={amenityIndex}
@@ -142,7 +181,17 @@ export default function AmenitiesPage() {
                             className='flex items-center gap-2'>
                             <div className='w-2 h-2 bg-primary rounded-full'></div>
                             <span className='text-sm text-muted-foreground'>
-                              {feature}
+                              {typeof feature === 'string' ? (
+                                feature
+                              ) : (
+                                <a
+                                  href={feature.url}
+                                  target='_blank'
+                                  rel='noopener noreferrer'
+                                  className='text-primary underline hover:text-primary/80 transition-colors'>
+                                  {feature.text}
+                                </a>
+                              )}
                             </span>
                           </div>
                         ))}
