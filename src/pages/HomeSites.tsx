@@ -32,7 +32,8 @@ export default function HomeSitesPage() {
       lot: '1 acre',
       status: 'Available',
       url: 'https://www.zillow.com/homedetails/3069-Poe-Rd-Soddy-Daisy-TN-37379/444348372_zpid/',
-      img: '99e64b41f7332d76914d3740b622a6f4-cc_ft_768.webp'
+      img: '99e64b41f7332d76914d3740b622a6f4-cc_ft_768.webp',
+      contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
     },
     {
       id: 2,
@@ -44,7 +45,8 @@ export default function HomeSitesPage() {
       lot: '1.07 acre',
       status: 'Contingent',
       url: 'https://www.zillow.com/homedetails/3009-Poe-Rd-Soddy-Daisy-TN-37379/442556057_zpid/',
-      img: '9b2adec5b26d4ba610f61cb157d72a7a-cc_ft_768.webp'
+      img: '9b2adec5b26d4ba610f61cb157d72a7a-cc_ft_768.webp',
+      contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
     },
     {
       id: 3,
@@ -53,7 +55,8 @@ export default function HomeSitesPage() {
       lot: '1.17 acre',
       status: 'Available',
       url: 'https://www.zillow.com/homedetails/3075-Poe-Rd-Soddy-Daisy-TN-37379/449944369_zpid/',
-      img: '167b51e4c6836708d02afe8fe7a312e0-cc_ft_768.webp'
+      img: '167b51e4c6836708d02afe8fe7a312e0-cc_ft_768.webp',
+      contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
     }
   ]
   const [sortMode, setSortMode] = useState<'asc' | 'desc' | '-'>('-')
@@ -101,12 +104,7 @@ export default function HomeSitesPage() {
             </CardHeader>
             <CardContent>
               <div className='overflow-x-auto'>
-                <div className='h-[35rem] min-w-[70rem] md:min-w-0 rounded-lg flex items-center justify-center relative'>
-                  {/* Background image behind the map */}
-                  <div
-                    className='absolute inset-0 w-full h-full z-0 bg-center bg-cover bg-no-repeat pointer-events-none'
-                    style={{ backgroundImage: "url('/mapbackground (2).png')" }}
-                  />
+                <div className='h-[35rem] min-w-[90rem] md:min-w-0 rounded-lg flex items-center justify-center relative'>
                   {/* Map component above background */}
                   <div className='relative z-10 w-full h-full flex items-center justify-center'>
                     <Map />
@@ -238,7 +236,7 @@ export default function HomeSitesPage() {
                     <Button
                       variant='outline'
                       size='sm'
-                      disabled={home.status === 'Reserved'}>
+                      href={home.contact}>
                       Schedule Tour
                     </Button>
                   </div>

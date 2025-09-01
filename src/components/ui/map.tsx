@@ -5,9 +5,15 @@ import React from 'react'
  * You can add props/callbacks for lot click/hover if needed.
  */
 export function SubdivisionMap() {
-
   return (
-    <div className='w-full h-auto'>
+    <div
+      className='w-full h-full relative flex items-center justify-center'
+      style={{
+        backgroundImage: "url('/mapbackground (2).png')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
       {/* Inline SVG markup below. */}
       <svg
         viewBox='0 0 1100 350'
@@ -809,7 +815,7 @@ export function SubdivisionMap() {
             id='tspan62-96'
             x='655.14331'
             y='86.259605'
-            style={{strokeWidth:0.357555}}>
+            style={{ strokeWidth: 0.357555 }}>
             15
           </tspan>
         </text>
@@ -843,7 +849,7 @@ export function SubdivisionMap() {
             id='tspan62-84'
             x='623.61487'
             y='80.261299'
-            style={{strokeWidth:0.355723}}>
+            style={{ strokeWidth: 0.355723 }}>
             16
           </tspan>
         </text>
@@ -877,7 +883,7 @@ export function SubdivisionMap() {
             id='tspan62-55'
             x='594.74127'
             y='74.354836'
-            style={{strokeWidth:0.360472}}>
+            style={{ strokeWidth: 0.360472 }}>
             17
           </tspan>
         </text>
@@ -1013,7 +1019,7 @@ export function SubdivisionMap() {
             id='tspan62-72'
             x='453.6893'
             y='48.544907'
-            style={{strokeWidth:0.359671}}>
+            style={{ strokeWidth: 0.359671 }}>
             21
           </tspan>
         </text>
@@ -1047,7 +1053,7 @@ export function SubdivisionMap() {
             id='tspan62-89'
             x='406.6304'
             y='46.209667'
-            style={{strokeWidth:0.359671}}>
+            style={{ strokeWidth: 0.359671 }}>
             22
           </tspan>
         </text>
@@ -1115,7 +1121,7 @@ export function SubdivisionMap() {
             id='tspan62-2'
             x='338.02023'
             y='64.157425'
-            style={{strokeWidth:0.358082}}>
+            style={{ strokeWidth: 0.358082 }}>
             24
           </tspan>
         </text>
@@ -1217,7 +1223,7 @@ export function SubdivisionMap() {
             id='tspan62-18'
             x='254.84592'
             y='85.533073'
-            style={{strokeWidth:0.358082}}>
+            style={{ strokeWidth: 0.358082 }}>
             27
           </tspan>
         </text>
@@ -1693,7 +1699,7 @@ export function SubdivisionMap() {
             id='tspan62-33'
             x='253.61345'
             y='287.97495'
-            style={{strokeWidth:0.360472}}>
+            style={{ strokeWidth: 0.360472 }}>
             41
           </tspan>
         </text>
@@ -1727,7 +1733,7 @@ export function SubdivisionMap() {
             id='tspan62-28'
             x='285.69516'
             y='281.9765'
-            style={{strokeWidth:0.358082}}>
+            style={{ strokeWidth: 0.358082 }}>
             42
           </tspan>
         </text>
@@ -1795,7 +1801,7 @@ export function SubdivisionMap() {
             id='tspan62-62'
             x='344.70871'
             y='270.22171'
-            style={{strokeWidth:0.361007}}>
+            style={{ strokeWidth: 0.361007 }}>
             44
           </tspan>
         </text>
@@ -1829,7 +1835,7 @@ export function SubdivisionMap() {
             id='tspan62-03'
             x='371.78296'
             y='264.12634'
-            style={{strokeWidth:0.358082}}>
+            style={{ strokeWidth: 0.358082 }}>
             45
           </tspan>
         </text>
@@ -1863,7 +1869,7 @@ export function SubdivisionMap() {
             id='tspan62-93'
             x='399.8222'
             y='258.12848'
-            style={{strokeWidth:0.355723}}>
+            style={{ strokeWidth: 0.355723 }}>
             46
           </tspan>
         </text>
@@ -1897,7 +1903,7 @@ export function SubdivisionMap() {
             id='tspan62-963'
             x='428.12918'
             y='252.22168'
-            style={{strokeWidth:0.361007}}>
+            style={{ strokeWidth: 0.361007 }}>
             47
           </tspan>
         </text>
@@ -2033,7 +2039,7 @@ export function SubdivisionMap() {
             id='tspan62-077'
             x='546.49536'
             y='228.12682'
-            style={{strokeWidth:0.357555}}>
+            style={{ strokeWidth: 0.357555 }}>
             51
           </tspan>
         </text>
