@@ -9,7 +9,7 @@ export function SubdivisionMap() {
     <div
       className='w-full h-full relative flex items-center justify-center'
       style={{
-        backgroundImage: "url('/mapbackground (2).png')",
+        backgroundImage: "url('/mapbackground.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
