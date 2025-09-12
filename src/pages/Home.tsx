@@ -147,7 +147,7 @@ export default function HomePage() {
               variant='outline'
               size='lg'
               className='border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary px-8 py-6 text-lg font-semibold'>
-              <NavLink to='https://maps.app.goo.gl/x6GrFJg5GcDQGVHu5'>
+              <NavLink to='/location'>
                 Get Directions
               </NavLink>
             </Button>

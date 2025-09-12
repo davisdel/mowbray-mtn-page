@@ -19,6 +19,7 @@ import {
   ArrowBigDown,
   ArrowBigUp
 } from 'lucide-react'
+import { NavLink } from 'react-router-dom'
 
 export default function HomeSitesPage() {
   const initialSites = [
@@ -93,12 +94,12 @@ export default function HomeSitesPage() {
         {/* Interactive Map Placeholder */}
         <section className='mb-16 overflow-y-auto'>
           <Card className='shadow-medium'>
-            <CardHeader>
-              <CardTitle className='flex items-center gap-2'>
+            <CardHeader className='text-center'>
+              <CardTitle className='flex items-center gap-2 justify-center text-center'>
                 <MapPin className='h-6 w-6 text-primary' />
                 Interactive Community Map
               </CardTitle>
-              <CardDescription>
+              <CardDescription className='text-center'>
                 Click on any home site marker to view details and availability
               </CardDescription>
             </CardHeader>
@@ -175,9 +176,7 @@ export default function HomeSitesPage() {
                   <div className='w-full h-48 rounded-t-lg overflow-hidden flex items-center justify-center bg-gray-100'>
                     <img
                       src={
-                        home.img.startsWith('http')
-                          ? home.img
-                          : `/${home.img}`
+                        home.img.startsWith('http') ? home.img : `/${home.img}`
                       }
                       alt={home.name}
                       className='object-cover w-full h-full'
@@ -233,10 +232,7 @@ export default function HomeSitesPage() {
                       <Eye className='h-4 w-4 mr-2' />
                       View Details
                     </Button>
-                    <Button
-                      variant='outline'
-                      size='sm'
-                      href={home.contact}>
+                    <Button variant='outline' size='sm' href={home.contact}>
                       Schedule Tour
                     </Button>
                   </div>
@@ -257,13 +253,9 @@ export default function HomeSitesPage() {
             <Button
               size='lg'
               className='bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-lg font-semibold shadow-strong'>
-              Contact Sales Team
-            </Button>
-            <Button
-              size='lg'
-              variant='outline'
-              className='border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary px-8 py-6 text-lg font-semibold'>
-              Download Floor Plans
+              <NavLink to='https://kw.com/agent/Cheryl-Fuqua/119107'>
+                Contact Sales Team
+              </NavLink>
             </Button>
           </div>
         </section>

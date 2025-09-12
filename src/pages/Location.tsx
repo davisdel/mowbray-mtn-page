@@ -129,17 +129,16 @@ export default function LocationPage() {
             <CardContent>
               <div className='h-96 bg-subtle-gradient rounded-lg flex items-center justify-center relative overflow-hidden'>
                 <iframe
-                  src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4206.659724158415!2d-85.27040432338849!3d35.286873672717206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88608d4e2608c497%3A0x8af8b7c1f23cf6ee!2s3000%20Poe%20Rd%2C%20Soddy-Daisy%2C%20TN%2037379!5e1!3m2!1sen!2sus!4v1753882328966!5m2!1sen!2sus'
+                  src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4206.659724158415!2d-85.27040432338849!3d35.286873672717206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88608d4e2608c497%3A0x8af8b7c1f23cf6ee!2s3009%20Poe%20Rd%2C%20Soddy-Daisy%2C%20TN%2037379!5e1!3m2!1sen!2sus!4v1753882328966!5m2!1sen!2sus'
                   width='100%'
                   height='100%'
                   style={{ border: 0 }}
-                  loading='lazy'
                   referrerPolicy='no-referrer-when-downgrade'></iframe>
               </div>
 
               {/* Quick Actions */}
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-6'>
-                <Button variant='outline' className='h-12' href='https://maps.google.com/maps?ll=35.286874,-85.267829&z=14&t=h&hl=en&gl=US&mapclient=embed&q=3000%20Poe%20Rd%20Soddy-Daisy%2C%20TN%2037379'>
+                <Button variant='outline' className='h-12' href='https://maps.google.com/maps?ll=35.286874,-85.267829&z=14&t=h&hl=en&gl=US&mapclient=embed&q=3009%20Poe%20Rd%20Soddy-Daisy%2C%20TN%2037379'>
                   <Navigation className='h-4 w-4 mr-2' />
                   Get Directions
                 </Button>
@@ -153,7 +152,7 @@ export default function LocationPage() {
         </section>
 
         {/* Address and Contact */}
-        <section className='mb-16'>
+        {/* <section className='mb-16'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             <Card className='shadow-soft'>
               <CardHeader>
@@ -164,24 +163,13 @@ export default function LocationPage() {
               </CardHeader>
               <CardContent className='space-y-4'>
                 <div>
-                  <h3 className='font-semibold text-foreground mb-2'>
-                    CommunityPlace
-                  </h3>
                   <p className='text-muted-foreground'>
-                    123 Community Avenue
+                    3009 Poe Rd.
                     <br />
-                    Riverside, ST 12345
+                    Soddy-Daisy, TN 37379
                     <br />
                     United States
                   </p>
-                </div>
-                <div className='space-y-2'>
-                  <div className='flex items-center gap-2 text-sm'>
-                    <span className='font-medium'>GPS Coordinates:</span>
-                    <span className='text-muted-foreground'>
-                      34.0522° N, 118.2437° W
-                    </span>
-                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -214,7 +202,7 @@ export default function LocationPage() {
               </CardContent>
             </Card>
           </div>
-        </section>
+        </section> */}
 
         {/* Transportation */}
         <section className='mb-16'>

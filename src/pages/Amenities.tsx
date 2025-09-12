@@ -27,7 +27,7 @@ export default function AmenitiesPage() {
           name: 'Walking Trail',
           icon: Leaf,
           description:
-            'Scenic walking trail meandering through the community and natural areas',
+            'Enjoy a scenic walking trail meandering through the community and natural areas',
           features: [
             '1 mile nature trail for taking in the natural surroundings of Mowbray Mountain',
             'Trail connects all homesites to the pond, pickle ball court and pavilion'
@@ -204,8 +204,7 @@ export default function AmenitiesPage() {
           </section>
         ))}
 
-        {/* Upcoming Events */}
-        <section className='mb-16'>
+        {/* <section className='mb-16'>
           <h2 className='text-3xl font-bold text-foreground mb-8'>
             Upcoming Community Events
           </h2>
@@ -243,7 +242,7 @@ export default function AmenitiesPage() {
               </div>
             </CardContent>
           </Card>
-        </section>
+        </section> */}
 
         {/* CTA Section */}
         <section className='bg-primary text-primary-foreground rounded-2xl p-12 text-center'>
@@ -253,12 +252,9 @@ export default function AmenitiesPage() {
             firsthand what makes our community so special.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <button className='bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg shadow-strong transition-all duration-200'>
+            <a href='https://kw.com/agent/Cheryl-Fuqua/119107' className='bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg shadow-strong transition-all duration-200'>
               Schedule Community Tour
-            </button>
-            <button className='border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200'>
-              View Event Calendar
-            </button>
+            </a>
           </div>
         </section>
       </div>
