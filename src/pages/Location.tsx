@@ -9,12 +9,10 @@ import { Button } from '@/components/ui/button'
 import {
   MapPin,
   Navigation,
-  Clock,
   Car,
   GraduationCap,
   ShoppingBag,
   Stethoscope,
-  Coffee,
   Plane,
   Train
 } from 'lucide-react'

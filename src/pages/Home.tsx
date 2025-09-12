@@ -32,8 +32,9 @@ export default function HomePage() {
             </span>
           </h1>
           <p className='text-xl md:text-2xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto'>
-            Discover luxury living in a vibrant community designed for modern
-            families. Where comfort meets elegance, and neighbors become family.
+            Nestled on Mowbray Mountain, this quiet community of luxury homes
+            offers a peaceful retreat -- a place where nature and community come
+            together.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <Button
@@ -74,7 +75,8 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className='text-base'>
-                  Thoughtfully designed homes with modern architecture and premium finishes throughout.
+                  Thoughtfully designed homes with modern architecture and
+                  premium finishes throughout.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -88,7 +90,8 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className='text-base'>
-                  Join a welcoming future community with regular events, activities, and shared spaces for all ages.
+                  Join a welcoming future community with regular events,
+                  activities, and shared spaces for all ages.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -102,7 +105,8 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className='text-base'>
-                  Sustainable design with abundant green spaces, walking trails, and eco-friendly features.
+                  Sustainable design with abundant green spaces, walking trails,
+                  and eco-friendly features.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -116,7 +120,8 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className='text-base'>
-                  Enjoy the quiet comforts of Cooper's Creek's natural mountain setting.
+                  Enjoy the quiet comforts of Cooper's Creek's natural mountain
+                  setting.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -136,13 +141,15 @@ export default function HomePage() {
             <Button
               size='lg'
               className='bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-lg font-semibold shadow-strong'>
-              Schedule a Visit
+              <NavLink to='https://kw.com/agent/Cheryl-Fuqua/119107'>Schedule a Visit</NavLink>
             </Button>
             <Button
               variant='outline'
               size='lg'
               className='border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary px-8 py-6 text-lg font-semibold'>
-              <NavLink to='/location'>Get Directions</NavLink>
+              <NavLink to='https://maps.app.goo.gl/x6GrFJg5GcDQGVHu5'>
+                Get Directions
+              </NavLink>
             </Button>
           </div>
         </div>

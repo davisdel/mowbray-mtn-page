@@ -9,8 +9,8 @@ export function SubdivisionMap() {
     <div
       className='w-full h-full relative flex items-center justify-center'
       style={{
-        backgroundImage: "url('/mapbackground.png')",
-        backgroundSize: 'cover',
+        backgroundImage: "url('/MapBackgroundFinal.png')",
+        backgroundSize: '100% 100%',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}>
@@ -18,8 +18,8 @@ export function SubdivisionMap() {
       <svg
         viewBox='0 0 1100 350'
         width='1100'
-        height='350'
-        style={{ transform: 'rotate(10deg)' }}
+        height='300'
+        style={{ transform: 'translate(-20px, -20px) rotate(5deg)' }}
         version='1.1'
         id='svg52'
         xmlns='http://www.w3.org/2000/svg'>
