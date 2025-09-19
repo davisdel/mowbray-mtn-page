@@ -19,12 +19,11 @@ import {
   ArrowBigDown,
   ArrowBigUp
 } from 'lucide-react'
-import { NavLink } from 'react-router-dom'
 
 export default function HomeSitesPage() {
   const initialSites = [
     {
-      id: 1,
+      id: 41,
       name: '3069 Poe Rd, Soddy Daisy, TN 37379',
       price: '$775,000',
       bedrooms: 4,
@@ -37,20 +36,20 @@ export default function HomeSitesPage() {
       contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
     },
     {
-      id: 2,
+      id: 51,
       name: '3009 Poe Rd, Soddy Daisy, TN 37379',
       price: '$689,000',
       bedrooms: 4,
       bathrooms: 4,
       sqft: '2,503',
       lot: '1.07 acre',
-      status: 'Contingent',
+      status: 'Pending',
       url: 'https://www.zillow.com/homedetails/3009-Poe-Rd-Soddy-Daisy-TN-37379/442556057_zpid/',
       img: '9b2adec5b26d4ba610f61cb157d72a7a-cc_ft_768.webp',
       contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
     },
     {
-      id: 3,
+      id: 40,
       name: '3075 Poe Rd, Soddy Daisy, TN 37379',
       price: '$90,000',
       lot: '1.17 acre',
@@ -58,18 +57,72 @@ export default function HomeSitesPage() {
       url: 'https://www.zillow.com/homedetails/3075-Poe-Rd-Soddy-Daisy-TN-37379/449944369_zpid/',
       img: '167b51e4c6836708d02afe8fe7a312e0-cc_ft_768.webp',
       contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
+    },
+    {
+      id: 38,
+      name: '3087 Poe Rd, Soddy Daisy, TN 37379',
+      price: '$785,000',
+      bedrooms: 4,
+      bathrooms: 4,
+      sqft: '3,183',
+      lot: '0.95 acre',
+      status: 'Available',
+      url: 'https://www.zillow.com/homedetails/3087-Poe-Rd-Soddy-Daisy-TN-37379/442076894_zpid/',
+      img: 'd014e8149fbd31345157d88b324bf382-cc_ft_768.webp',
+      contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
+    },
+    {
+      id: 7,
+      name: '2796 Mowbray Pike, Soddy Daisy, TN 37379',
+      price: '$658,900',
+      bedrooms: 3,
+      bathrooms: 3,
+      sqft: '2,481',
+      lot: '1.12 acre',
+      status: 'Available',
+      url: 'https://www.zillow.com/homedetails/2796-Mowbray-Pike-Soddy-Daisy-TN-37379/449944466_zpid/',
+      img: '16109e525ab87371b4fe844586109ba0-cc_ft_768.webp',
+      contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
+    },
+    {
+      id: 4,
+      name: '2772 Mowbray Pike, Soddy Daisy, TN 37379',
+      price: '$639,500',
+      bedrooms: 4,
+      bathrooms: 4,
+      sqft: '2,358',
+      lot: '0.64 acre',
+      status: 'Available',
+      url: 'https://www.zillow.com/homedetails/2772-Mowbray-Pike-Soddy-Daisy-TN-37379/449944568_zpid/',
+      img: '80048f0eb0192470d228dbb7f0db7756-cc_ft_768.webp',
+      contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
     }
   ]
   const [sortMode, setSortMode] = useState<'asc' | 'desc' | '-'>('-')
   const [homeSites, setHomeSites] = useState(initialSites)
+  const [highlightedId, setHighlightedId] = useState<number | null>(null)
+  const cardRefs = React.useRef<Record<number, HTMLDivElement | null>>({})
 
+  // Callback for map click
+  const handleMapClick = (id: number) => {
+    setHighlightedId(id)
+    setTimeout(() => {
+      const ref = cardRefs.current[id]
+      if (ref) {
+        ref.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }
+    }, 200)
+    setTimeout(() => {
+      setHighlightedId(null)
+    }, 5000)
+  }
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'Available':
         return 'bg-accent text-accent-foreground'
       case 'Coming Soon':
         return 'bg-primary text-primary-foreground'
-      case 'Reserved':
+      case 'Pending':
         return 'bg-muted text-muted-foreground'
       default:
         return 'bg-secondary text-secondary-foreground'
@@ -108,7 +161,14 @@ export default function HomeSitesPage() {
                 <div className='h-[35rem] min-w-[90rem] md:min-w-0 rounded-lg flex items-center justify-center relative'>
                   {/* Map component above background */}
                   <div className='relative z-10 w-full h-full flex items-center justify-center'>
-                    <Map />
+                    <Map
+                      onSiteClick={handleMapClick}
+                      siteStatusList={homeSites.map((site) => ({
+                        id: site.id,
+                        status: site.status.toLowerCase() as
+                          'available' | 'sold' | 'pending'
+                      }))}
+                    />
                   </div>
                 </div>
               </div>
@@ -170,7 +230,8 @@ export default function HomeSitesPage() {
             {homeSites.map((home) => (
               <Card
                 key={home.id}
-                className='shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 group'>
+                ref={(el) => (cardRefs.current[home.id] = el)}
+                className={`shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 group ${highlightedId === home.id ? 'ring-4 ring-primary' : ''}`}>
                 <div className='relative'>
                   {/* Home image card */}
                   <div className='w-full h-48 rounded-t-lg overflow-hidden flex items-center justify-center bg-gray-100'>
@@ -251,11 +312,10 @@ export default function HomeSitesPage() {
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <Button
+              href='https://kw.com/agent/Cheryl-Fuqua/119107'
               size='lg'
               className='bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-lg font-semibold shadow-strong'>
-              <NavLink to='https://kw.com/agent/Cheryl-Fuqua/119107'>
-                Contact Sales Team
-              </NavLink>
+              Contact Sales Team
             </Button>
           </div>
         </section>

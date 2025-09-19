@@ -68,11 +68,19 @@ export function Footer() {
               <ul className='space-y-2 text-sm'>
                 <li className='flex items-center gap-2 text-sidebar-foreground/70'>
                   <Phone className='h-4 w-4' />
-                  (423) 505-4880
+                  <a
+                    href='tel:4235054880'
+                    className='hover:text-sidebar-primary transition-colors'>
+                    (423) 505-4880
+                  </a>
                 </li>
                 <li className='flex items-center gap-2 text-sidebar-foreground/70'>
                   <Mail className='h-4 w-4' />
-                  cheryl@cherylfuqua.com
+                  <a
+                    href='mailto:cheryl@cherylfuqua.com'
+                    className='hover:text-sidebar-primary transition-colors'>
+                    cheryl@cherylfuqua.com
+                  </a>
                 </li>
               </ul>
             </div>

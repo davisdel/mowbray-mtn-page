@@ -6,6 +6,7 @@ import {
   CardTitle
 } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
 import {
   TreePine,
   Calendar,
@@ -252,9 +253,9 @@ export default function AmenitiesPage() {
             firsthand what makes our community so special.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <a href='https://kw.com/agent/Cheryl-Fuqua/119107' className='bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg shadow-strong transition-all duration-200'>
+            <Button href='https://kw.com/agent/Cheryl-Fuqua/119107' size='lg' className='bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 rounded-lg font-semibold text-lg shadow-strong transition-all duration-200'>
               Schedule Community Tour
-            </a>
+            </Button>
           </div>
         </section>
       </div>

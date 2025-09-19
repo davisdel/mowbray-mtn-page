@@ -139,18 +139,19 @@ export default function HomePage() {
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <Button
+              href='https://kw.com/agent/Cheryl-Fuqua/119107'
               size='lg'
               className='bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-lg font-semibold shadow-strong'>
-              <NavLink to='https://kw.com/agent/Cheryl-Fuqua/119107'>Schedule a Visit</NavLink>
+              Schedule a Visit
             </Button>
-            <Button
-              variant='outline'
-              size='lg'
-              className='border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary px-8 py-6 text-lg font-semibold'>
-              <NavLink to='/location'>
+            <NavLink to='/location'>
+              <Button
+                variant='outline'
+                size='lg'
+                className='border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary px-8 py-6 text-lg font-semibold'>
                 Get Directions
-              </NavLink>
-            </Button>
+              </Button>
+            </NavLink>
           </div>
         </div>
       </section>
