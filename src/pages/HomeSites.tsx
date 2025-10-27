@@ -4,7 +4,8 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle
+  CardTitle,
+  CardFooter
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -102,6 +103,45 @@ export default function HomeSitesPage() {
                 </div>
               </div>
             </CardContent>
+            <CardFooter>
+              <div className='flex flex-wrap gap-6 justify-center items-center w-full'>
+                <div className='flex items-center gap-2'>
+                  <span
+                    className='inline-block w-4 h-4 rounded-full'
+                    style={{ background: '#CBDF88' }}
+                  />
+                  <span className='text-sm'>Available</span>
+                </div>
+                <div className='flex items-center gap-2'>
+                  <span
+                    className='inline-block w-4 h-4 rounded-full'
+                    style={{ background: '#c2c2c2ff' }}
+                  />
+                  <span className='text-sm'>Sold</span>
+                </div>
+                <div className='flex items-center gap-2'>
+                  <span
+                    className='inline-block w-4 h-4 rounded-full'
+                    style={{ background: 'rgba(241, 240, 160, 1)' }}
+                  />
+                  <span className='text-sm'>Pending</span>
+                </div>
+                <div className='flex items-center gap-2'>
+                  <span
+                    className='inline-block w-4 h-4 rounded-full'
+                    style={{ background: '#A0D8EF' }}
+                  />
+                  <span className='text-sm'>Coming Soon</span>
+                </div>
+                <div className='flex items-center gap-2'>
+                  <span
+                    className='inline-block w-4 h-4 rounded-full'
+                    style={{ background: 'rgba(255, 166, 169, 1)' }}
+                  />
+                  <span className='text-sm'>Lot</span>
+                </div>
+              </div>
+            </CardFooter>
           </Card>
         </section>
 
