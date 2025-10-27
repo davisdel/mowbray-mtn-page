@@ -1,6 +1,6 @@
 import React from 'react'
 
-type SiteStatus = 'available' | 'sold' | 'pending'
+type SiteStatus = 'available' | 'sold' | 'pending' | 'lot' | 'coming soon'
 type SiteStatusItem = { id: number; status: SiteStatus }
 type SubdivisionMapProps = {
   onSiteClick?: (id: number) => void
@@ -10,18 +10,22 @@ type SubdivisionMapProps = {
 // Define your colors for each status
 const STATUS_COLORS: Record<SiteStatus, string> = {
   available: '#CBDF88',
-  sold: '#ffa6a9ff',
-  pending: '#f1f0a0ff'
+  sold: '#c2c2c2ff',
+  pending: 'rgba(241, 240, 160, 1)',
+  'coming soon': '#A0D8EF',
+  lot: 'rgba(255, 166, 169, 1)'
 }
 
 /**
  * SubdivisionMap renders the interactive SVG subdivision map inline for full interactivity.
  * You can add props/callbacks for lot click/hover if needed.
  */
-export function SubdivisionMap({ onSiteClick, siteStatusList = [] }: SubdivisionMapProps) {
-
+export function SubdivisionMap({
+  onSiteClick,
+  siteStatusList = []
+}: SubdivisionMapProps) {
   const getFillById = (id: number) => {
-    const found = siteStatusList.find(site => site.id === id)
+    const found = siteStatusList.find((site) => site.id === id)
     return found ? STATUS_COLORS[found.status] : STATUS_COLORS.available
   }
 
@@ -69,16 +73,23 @@ export function SubdivisionMap({ onSiteClick, siteStatusList = [] }: Subdivision
         <path
           id='1'
           onClick={() => onSiteClick && onSiteClick(1)}
-          style={{ fill: getFillById(1), stroke: '#4b5563', strokeWidth: 1.62194 }}
+          style={{
+            fill: getFillById(1),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           className='lot'
           d='m 1027.8051,285.91446 30.4829,-163.87225 30.2033,5.6511 -45.6123,160.50735 z'
-          sodipodi-nodetypes='ccccc'
-        />
+          sodipodi-nodetypes='ccccc'></path>
         <path
           id='2'
           onClick={() => onSiteClick && onSiteClick(2)}
           className='lot'
-          style={{ fill: getFillById(2), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(2),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 1058.288,122.04221 -30.308,163.87944 -27.6566,-3.6389 29.8194,-164.97104 z'
           sodipodi-nodetypes='ccccc'
         />
@@ -86,7 +97,11 @@ export function SubdivisionMap({ onSiteClick, siteStatusList = [] }: Subdivision
           id='3'
           onClick={() => onSiteClick && onSiteClick(3)}
           className='lot'
-          style={{ fill: getFillById(3), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(3),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='M 1030.1428,117.31171 1000.3234,282.28275 969.78205,279.191 1000.8377,112.36295 Z'
           sodipodi-nodetypes='ccccc'
         />
@@ -94,7 +109,11 @@ export function SubdivisionMap({ onSiteClick, siteStatusList = [] }: Subdivision
           id='4'
           onClick={() => onSiteClick && onSiteClick(4)}
           className='lot'
-          style={{ fill: getFillById(4), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(4),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 969.78205,279.19101 -55.27307,-23.49469 13.01951,-67.36965 32.18616,-8.01483 12.43564,-72.91123 28.68741,4.96235 z'
           sodipodi-nodetypes='ccccccc'
         />
@@ -102,7 +121,11 @@ export function SubdivisionMap({ onSiteClick, siteStatusList = [] }: Subdivision
           id='5'
           onClick={() => onSiteClick && onSiteClick(5)}
           className='lot'
-          style={{ fill: getFillById(5), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(5),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 959.71465,180.31184 -32.18616,8.01483 15.31673,-86.52805 29.30507,5.60198 z'
           sodipodi-nodetypes='ccccc'
         />
@@ -110,7 +133,11 @@ export function SubdivisionMap({ onSiteClick, siteStatusList = [] }: Subdivision
           id='6'
           onClick={() => onSiteClick && onSiteClick(6)}
           className='lot'
-          style={{ fill: getFillById(6), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(6),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 914.50898,255.69632 -54.28218,-22.25844 7.31244,-36.54662 30.73165,-11.81568 17.12397,-87.67066 27.45036,4.3937 z'
           sodipodi-nodetypes='ccccccc'
         />
@@ -118,7 +145,11 @@ export function SubdivisionMap({ onSiteClick, siteStatusList = [] }: Subdivision
           id='7'
           onClick={() => onSiteClick && onSiteClick(7)}
           className='lot'
-          style={{ fill: getFillById(7), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(7),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 898.27089,185.07557 -30.73165,11.81569 17.65859,-104.87688 30.19688,5.39054 z'
           sodipodi-nodetypes='ccccc'
         />
@@ -126,13 +157,21 @@ export function SubdivisionMap({ onSiteClick, siteStatusList = [] }: Subdivision
           id='8'
           onClick={() => onSiteClick && onSiteClick(8)}
           className='lot'
-          style={{ fill: getFillById(8), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(8),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='M 885.19783,92.01439 860.2268,233.43788 834.04136,222.03528 857.40311,86.65255 Z'
           sodipodi-nodetypes='ccccc'
         />
         <path
           d='m 829.33577,80.55439 -23.29154,129.73392 27.99713,11.74697 23.36175,-135.38274 z'
-          style={{ fill: getFillById(9), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(9),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           id='9'
           onClick={() => onSiteClick && onSiteClick(9)}
           className='lot'
@@ -142,7 +181,11 @@ export function SubdivisionMap({ onSiteClick, siteStatusList = [] }: Subdivision
           id='10'
           onClick={() => onSiteClick && onSiteClick(10)}
           className='lot'
-          style={{ fill: getFillById(10), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(10),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='M 829.33577,80.55439 806.04423,210.28831 778.86648,198.19622 800.64768,75.36398 Z'
           sodipodi-nodetypes='ccccc'
         />
@@ -150,7 +193,11 @@ export function SubdivisionMap({ onSiteClick, siteStatusList = [] }: Subdivision
           id='11'
           onClick={() => onSiteClick && onSiteClick(11)}
           className='lot'
-          style={{ fill: getFillById(11), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(11),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 778.86648,198.19623 -28.81877,-11.33237 21.63994,-117.02333 28.96003,5.52345 z'
           sodipodi-nodetypes='ccccc'
         />
@@ -158,292 +205,452 @@ export function SubdivisionMap({ onSiteClick, siteStatusList = [] }: Subdivision
           id='12'
           onClick={() => onSiteClick && onSiteClick(12)}
           className='lot'
-          style={{ fill: getFillById(12), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(12),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 771.68765,69.84053 -21.63994,117.02334 -43.39316,-19.23769 4.25381,-28.73342 20.45296,-6.15405 11.9131,-68.21471 z'
         />
         <path
           id='13'
           onClick={() => onSiteClick && onSiteClick(13)}
           className='lot'
-          style={{ fill: getFillById(13), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(13),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 743.27442,64.524 -11.9131,68.21471 -24.70677,34.88747 -27.66408,-10.30153 6.46215,-41.44402 19.8509,-7.4575 10.05307,-49.05632 z'
         />
         <path
           id='14'
           onClick={() => onSiteClick && onSiteClick(14)}
           className='lot'
-          style={{ fill: getFillById(14), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(14),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 715.35659,59.36681 -10.05307,49.05632 -19.8509,7.45749 -6.46215,41.44403 -27.36579,-11.22892 6.24617,-33.96991 18.34656,-5.59293 10.46239,-52.46902 z'
         />
         <path
           id='15'
           onClick={() => onSiteClick && onSiteClick(15)}
           className='lot'
-          style={{ fill: getFillById(15), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(15),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 686.6798,54.06387 -10.46239,52.46902 -18.34656,5.59293 -6.24617,33.96991 -17.58004,-3.39759 18.20231,-94.49454 z'
         />
         <path
           id='16'
           onClick={() => onSiteClick && onSiteClick(16)}
           className='lot'
-          style={{ fill: getFillById(16), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(16),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 652.24695,48.2036 -18.20231,94.49454 -56.06256,-10.33631 4.52468,-27.41484 31.75042,-9.14609 9.70945,-53.05127 z'
         />
         <path
           id='17'
           onClick={() => onSiteClick && onSiteClick(17)}
           className='lot'
-          style={{ fill: getFillById(17), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(17),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 614.25718,95.8009 -31.75042,9.14609 12.33568,-67.34892 29.12419,5.15156 z'
         />
         <path
           id='18'
           onClick={() => onSiteClick && onSiteClick(18)}
           className='lot'
-          style={{ fill: getFillById(18), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(18),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 594.84244,37.59807 -16.86036,94.76376 -68.44704,-12.77823 3.56079,-22.42513 42.96212,-13.11116 10.60988,-50.4911 z'
         />
         <path
           id='19'
           onClick={() => onSiteClick && onSiteClick(19)}
           className='lot'
-          style={{ fill: '#ffa6a9ff', stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{ fill: getFillById(19), stroke: '#493636ff', strokeWidth: 2.5 }}
           d='m 566.66783,33.55621 -10.60988,50.4911 -42.96212,13.11116 4.73908,-23.56612 12.06238,-4.31927 7.90905,-41.69923 z'
         />
         <path
           id='20'
           onClick={() => onSiteClick && onSiteClick(20)}
           className='lot'
-          style={{ fill: getFillById(20), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(20),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 537.80635,27.57385 -7.90905,41.69923 -12.06239,4.31927 -8.29987,45.99125 -75.43689,-13.59312 -1.20323,-36.35937 55.18096,-14.38688 6.87119,-35.59072 z'
         />
         <path
           id='21'
           onClick={() => onSiteClick && onSiteClick(21)}
           className='lot'
-          style={{ fill: getFillById(21), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(21),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 432.89492,69.63111 -1.57765,-53.70034 c 18.97508,-1.11557 40.56767,0.74716 63.6298,3.72274 l -6.87119,35.59072 z'
         />
         <path
           id='22'
           onClick={() => onSiteClick && onSiteClick(22)}
           className='lot'
-          style={{ fill: getFillById(22), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(22),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 431.31727,15.93077 2.78087,90.05971 -24.37616,-4.11432 -10.85063,-83.3521 c 11.39822,-1.44735 22.21354,-2.31178 32.44592,-2.59329 z'
         />
         <path
           id='23'
           onClick={() => onSiteClick && onSiteClick(23)}
           className='lot'
-          style={{ fill: getFillById(23), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(23),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 398.87135,18.52406 10.85063,83.3521 -37.06572,-6.95461 -17.18991,-66.94078 c 14.7598,-4.60954 29.22813,-7.76178 43.405,-9.45671 z'
         />
         <path
           id='24'
           onClick={() => onSiteClick && onSiteClick(24)}
           className='lot'
-          style={{ fill: getFillById(24), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(24),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 355.46635,27.98077 17.18991,66.94078 -31.51848,32.87343 -10.6897,-43.61393 6.80532,-7.01128 -10.90098,-41.76806 z'
         />
         <path
           id='25'
           onClick={() => onSiteClick && onSiteClick(25)}
           className='lot'
-          style={{ fill: getFillById(25), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(25),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 326.35242,35.40171 10.90098,41.76806 -6.80532,7.01128 10.6897,43.61393 -15.27743,16.35174 L 298.8336,43.01964 Z'
         />
         <path
           id='26'
           onClick={() => onSiteClick && onSiteClick(26)}
           className='lot'
-          style={{ fill: getFillById(26), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(26),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='M 298.8336,43.01964 325.86035,144.14672 302.33794,170.04716 270.06488,51.32831 Z'
         />
         <path
           id='27'
           onClick={() => onSiteClick && onSiteClick(27)}
           className='lot'
-          style={{ fill: getFillById(27), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(27),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 270.06488,51.32831 32.27306,118.71885 -28.19711,6.81399 -31.39867,-117.62586 z'
         />
         <path
           id='28'
           onClick={() => onSiteClick && onSiteClick(28)}
           className='lot'
-          style={{ fill: getFillById(28), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(28),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 242.74216,59.23529 31.39868,117.62586 -28.04249,7.1492 -31.83586,-117.5218 z'
         />
         <path
           id='29'
           onClick={() => onSiteClick && onSiteClick(29)}
           className='lot'
-          style={{ fill: getFillById(29), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(29),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 246.09832,184.01035 -18.65913,5.70167 -46.04462,-113.8157 c 9.79013,-3.71884 20.7461,-6.85476 32.86793,-9.40777 z'
         />
         <path
           id='30'
           onClick={() => onSiteClick && onSiteClick(30)}
           className='lot'
-          style={{ fill: getFillById(30), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(30),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 181.39458,75.89632 46.04463,113.8157 -11.01775,3.07897 -74.02495,-93.39093 c 10.66766,-9.29189 23.66705,-17.12647 38.99807,-23.50374 z'
         />
         <path
           id='31'
           onClick={() => onSiteClick && onSiteClick(31)}
           className='lot'
-          style={{ fill: getFillById(31), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(31),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 142.39647,99.40006 74.02499,93.39093 -15.00493,4.62691 -90.20106,-64.99002 c 7.47675,-11.89067 17.87502,-22.88595 31.181,-33.02782 z'
         />
         <path
           id='32'
           onClick={() => onSiteClick && onSiteClick(32)}
           className='lot'
-          style={{ fill: getFillById(32), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(32),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 111.21547,132.42788 90.20107,64.99002 -47.63997,12.17401 -65.936839,-42.16425 c 6.334601,-10.50074 14.126489,-22.16733 23.375739,-34.99978 z'
         />
         <path
           id='33'
           onClick={() => onSiteClick && onSiteClick(33)}
           className='lot'
-          style={{ fill: getFillById(33), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(33),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='M 87.839746,167.42767 153.77659,209.59191 137.6687,233.16545 72.824851,191.8593 Z'
         />
         <path
           id='34'
           onClick={() => onSiteClick && onSiteClick(34)}
           className='lot'
-          style={{ fill: getFillById(34), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(34),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 72.824851,191.8593 64.843849,41.30615 -15.282,23.99774 -65.281108,-41.86516 z'
         />
         <path
           id='35'
           onClick={() => onSiteClick && onSiteClick(35)}
           className='lot'
-          style={{ fill: getFillById(35), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(35),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 40.227494,240.88174 16.878098,-25.58371 65.281108,41.86516 -16.22229,24.71513 z'
         />
         <path
           id='36'
           onClick={() => onSiteClick && onSiteClick(36)}
           className='lot'
-          style={{ fill: getFillById(36), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(36),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 40.227494,240.88174 65.936916,40.99658 -16.376881,25.80079 -65.06248,-44.16196 z'
         />
         <path
           id='37'
           onClick={() => onSiteClick && onSiteClick(37)}
           className='lot'
-          style={{ fill: getFillById(37), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(37),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 161.43813,332.52678 -21.20571,6.37888 -50.444891,-31.22655 44.485851,-69.18194 z'
         />
         <path
           id='38'
           onClick={() => onSiteClick && onSiteClick(38)}
           className='lot'
-          style={{ fill: getFillById(38), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(38),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 189.3123,324.05742 -27.87417,8.46936 -27.16475,-94.02961 19.50321,-28.90526 5.79819,-1.48168 z'
         />
         <path
           id='39'
           onClick={() => onSiteClick && onSiteClick(39)}
           className='lot'
-          style={{ fill: getFillById(39), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(39),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 189.3123,324.05742 -29.73752,-115.94719 36.96552,-9.42274 21.28296,119.36313 z'
         />
         <path
           id='40'
           onClick={() => onSiteClick && onSiteClick(40)}
           className='lot'
-          style={{ fill: getFillById(40), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(40),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='M 217.82326,318.05062 196.5403,198.68749 231.28699,188.45196 253.20598,311.98562 Z'
         />
         <path
           id='41'
           onClick={() => onSiteClick && onSiteClick(41)}
           className='lot'
-          style={{ fill: getFillById(41), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(41),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 281.52073,306.50335 -28.31475,5.48227 -21.91899,-123.53366 28.8326,-8.01622 z'
         />
         <path
           id='42'
           onClick={() => onSiteClick && onSiteClick(42)}
           className='lot'
-          style={{ fill: getFillById(42), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(42),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 281.52073,306.50335 -21.40114,-126.0676 33.14751,-8.29317 22.59458,127.96139 z'
         />
         <path
           id='43'
           onClick={() => onSiteClick && onSiteClick(43)}
           className='lot'
-          style={{ fill: getFillById(43), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(43),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 344.36009,294.42814 -28.49841,5.67583 -22.59458,-127.96139 9.0708,-2.09543 15.21373,-16.75178 z'
         />
         <path
           id='44'
           onClick={() => onSiteClick && onSiteClick(44)}
           className='lot'
-          style={{ fill: getFillById(44), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(44),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 372.41015,289.3714 -28.05006,5.05675 -26.80846,-141.13278 26.14329,-27.18114 z'
         />
         <path
           id='45'
           onClick={() => onSiteClick && onSiteClick(45)}
           className='lot'
-          style={{ fill: getFillById(45), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(45),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='M 372.41015,289.3714 343.69492,126.11423 368.42706,99.48081 401.33744,283.98167 Z'
         />
         <path
           id='46'
           onClick={() => onSiteClick && onSiteClick(46)}
           className='lot'
-          style={{ fill: getFillById(46), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(46),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 430.08907,278.58484 -28.75163,5.39683 -32.91038,-184.50086 4.2292,-4.55926 26.68643,5.17765 z'
         />
         <path
           id='47'
           onClick={() => onSiteClick && onSiteClick(47)}
           className='lot'
-          style={{ fill: getFillById(47), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(47),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 457.47832,273.74851 -27.38928,4.83633 -30.74638,-178.48564 29.86243,5.15632 z'
         />
         <path
           id='48'
           onClick={() => onSiteClick && onSiteClick(48)}
           className='lot'
-          style={{ fill: getFillById(48), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(48),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 486.67227,268.23184 -29.19395,5.51668 -28.27322,-168.49299 30.1214,5.67781 z'
         />
         <path
           id='49'
           onClick={() => onSiteClick && onSiteClick(49)}
           className='lot'
-          style={{ fill: getFillById(49), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(49),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 515.30949,263.10744 -28.63722,5.1244 -27.34577,-157.2985 31.41948,5.73299 z'
         />
         <path
           id='50'
           onClick={() => onSiteClick && onSiteClick(50)}
           className='lot'
-          style={{ fill: getFillById(50), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(50),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 544.08074,258.0989 -28.77127,5.00854 -24.56351,-146.44111 29.69864,5.20951 z'
         />
         <path
           id='51'
           onClick={() => onSiteClick && onSiteClick(51)}
           className='lot'
-          style={{ fill: getFillById(51), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(51),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 578.60845,252.57474 -34.52769,5.52416 -23.63614,-136.22306 37.61914,6.84382 z'
         />
         <path
           id='52'
           onClick={() => onSiteClick && onSiteClick(52)}
           className='lot'
-          style={{ fill: getFillById(52), stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{
+            fill: getFillById(52),
+            stroke: '#493636ff',
+            strokeWidth: 2.5
+          }}
           d='m 619.13747,245.71695 -40.52902,6.85778 -20.54469,-123.85507 42.69302,7.66712 z'
         />
         <path
           id='pond'
-          style={{ fill: '#CBDF88', stroke: '#4b5563', strokeWidth: 1.51038 }}
+          style={{ fill: '#CBDF88', stroke: '#493636ff', strokeWidth: 2.5 }}
           d='m 969.78205,279.191 -350.64458,-33.47405 -18.38069,-109.33017 50.8679,9.70895 z'
         />
         <text

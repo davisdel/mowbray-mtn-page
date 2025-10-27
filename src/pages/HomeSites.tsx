@@ -20,86 +20,11 @@ import {
   ArrowBigUp
 } from 'lucide-react'
 
+import { initialHomeSites, HomeSite } from '@/data/homeSites'
+
 export default function HomeSitesPage() {
-  const initialSites = [
-    {
-      id: 41,
-      name: '3069 Poe Rd, Soddy Daisy, TN 37379',
-      price: '$775,000',
-      bedrooms: 4,
-      bathrooms: 4,
-      sqft: '2,932',
-      lot: '1 acre',
-      status: 'Available',
-      url: 'https://www.zillow.com/homedetails/3069-Poe-Rd-Soddy-Daisy-TN-37379/444348372_zpid/',
-      img: '99e64b41f7332d76914d3740b622a6f4-cc_ft_768.webp',
-      contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
-    },
-    {
-      id: 51,
-      name: '3009 Poe Rd, Soddy Daisy, TN 37379',
-      price: '$689,000',
-      bedrooms: 4,
-      bathrooms: 4,
-      sqft: '2,503',
-      lot: '1.07 acre',
-      status: 'Pending',
-      url: 'https://www.zillow.com/homedetails/3009-Poe-Rd-Soddy-Daisy-TN-37379/442556057_zpid/',
-      img: '9b2adec5b26d4ba610f61cb157d72a7a-cc_ft_768.webp',
-      contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
-    },
-    {
-      id: 40,
-      name: '3075 Poe Rd, Soddy Daisy, TN 37379',
-      price: '$90,000',
-      lot: '1.17 acre',
-      status: 'Available',
-      url: 'https://www.zillow.com/homedetails/3075-Poe-Rd-Soddy-Daisy-TN-37379/449944369_zpid/',
-      img: '167b51e4c6836708d02afe8fe7a312e0-cc_ft_768.webp',
-      contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
-    },
-    {
-      id: 38,
-      name: '3087 Poe Rd, Soddy Daisy, TN 37379',
-      price: '$785,000',
-      bedrooms: 4,
-      bathrooms: 4,
-      sqft: '3,183',
-      lot: '0.95 acre',
-      status: 'Available',
-      url: 'https://www.zillow.com/homedetails/3087-Poe-Rd-Soddy-Daisy-TN-37379/442076894_zpid/',
-      img: 'd014e8149fbd31345157d88b324bf382-cc_ft_768.webp',
-      contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
-    },
-    {
-      id: 7,
-      name: '2796 Mowbray Pike, Soddy Daisy, TN 37379',
-      price: '$658,900',
-      bedrooms: 3,
-      bathrooms: 3,
-      sqft: '2,481',
-      lot: '1.12 acre',
-      status: 'Available',
-      url: 'https://www.zillow.com/homedetails/2796-Mowbray-Pike-Soddy-Daisy-TN-37379/449944466_zpid/',
-      img: '16109e525ab87371b4fe844586109ba0-cc_ft_768.webp',
-      contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
-    },
-    {
-      id: 4,
-      name: '2772 Mowbray Pike, Soddy Daisy, TN 37379',
-      price: '$639,500',
-      bedrooms: 4,
-      bathrooms: 4,
-      sqft: '2,358',
-      lot: '0.64 acre',
-      status: 'Available',
-      url: 'https://www.zillow.com/homedetails/2772-Mowbray-Pike-Soddy-Daisy-TN-37379/449944568_zpid/',
-      img: '80048f0eb0192470d228dbb7f0db7756-cc_ft_768.webp',
-      contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
-    }
-  ]
   const [sortMode, setSortMode] = useState<'asc' | 'desc' | '-'>('-')
-  const [homeSites, setHomeSites] = useState(initialSites)
+  const [homeSites, setHomeSites] = useState<HomeSite[]>(initialHomeSites)
   const [highlightedId, setHighlightedId] = useState<number | null>(null)
   const cardRefs = React.useRef<Record<number, HTMLDivElement | null>>({})
 
@@ -147,7 +72,7 @@ export default function HomeSitesPage() {
         {/* Interactive Map Placeholder */}
         <section className='mb-16 overflow-y-auto'>
           <Card className='shadow-medium'>
-            <CardHeader className='text-center'>
+            <CardHeader>
               <CardTitle className='flex items-center gap-2 justify-center text-center'>
                 <MapPin className='h-6 w-6 text-primary' />
                 Interactive Community Map
@@ -166,7 +91,11 @@ export default function HomeSitesPage() {
                       siteStatusList={homeSites.map((site) => ({
                         id: site.id,
                         status: site.status.toLowerCase() as
-                          'available' | 'sold' | 'pending'
+                          | 'available'
+                          | 'sold'
+                          | 'pending'
+                          | 'coming soon'
+                          | 'lot'
                       }))}
                     />
                   </div>
@@ -193,7 +122,7 @@ export default function HomeSitesPage() {
                   else nextMode = '-'
                   setSortMode(nextMode)
                   if (nextMode === '-') {
-                    setHomeSites([...initialSites])
+                    setHomeSites([...initialHomeSites])
                   } else {
                     setHomeSites((prev) => {
                       const sorted = [...prev].sort((a, b) => {
@@ -227,79 +156,85 @@ export default function HomeSitesPage() {
           </div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {homeSites.map((home) => (
-              <Card
-                key={home.id}
-                ref={(el) => (cardRefs.current[home.id] = el)}
-                className={`shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 group ${highlightedId === home.id ? 'ring-4 ring-primary' : ''}`}>
-                <div className='relative'>
-                  {/* Home image card */}
-                  <div className='w-full h-48 rounded-t-lg overflow-hidden flex items-center justify-center bg-gray-100'>
-                    <img
-                      src={
-                        home.img.startsWith('http') ? home.img : `/${home.img}`
-                      }
-                      alt={home.name}
-                      className='object-cover w-full h-full'
-                    />
-                  </div>
-                  {/* Home info overlay */}
-                  <div className='absolute top-3 right-3'>
-                    <Badge className={getStatusColor(home.status)}>
-                      {home.status}
-                    </Badge>
-                  </div>
-                </div>
-
-                <CardHeader>
-                  <div className='flex justify-between items-start'>
-                    <div>
-                      <CardTitle className='text-xl'>{home.name}</CardTitle>
-                      <CardDescription className='text-2xl font-bold text-primary mt-1'>
-                        {home.price}
-                      </CardDescription>
+            {homeSites
+              .filter((home) => !!home.url)
+              .map((home) => (
+                <Card
+                  key={home.id}
+                  ref={(el) => (cardRefs.current[home.id] = el)}
+                  className={`shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 group ${highlightedId === home.id ? 'ring-4 ring-primary' : ''}`}>
+                  <div className='relative'>
+                    {/* Home image card */}
+                    <div className='w-full h-48 rounded-t-lg overflow-hidden flex items-center justify-center bg-gray-100'>
+                      <img
+                        src={
+                          home.img.startsWith('http')
+                            ? home.img
+                            : `/${home.img}`
+                        }
+                        alt={home.name}
+                        className='object-cover w-full h-full'
+                      />
                     </div>
-                  </div>
-                </CardHeader>
-
-                <CardContent className='space-y-4'>
-                  {/* Home Stats */}
-                  <div className='grid grid-cols-2 gap-4 text-sm'>
-                    <div className='flex items-center gap-2'>
-                      <Bed className='h-4 w-4 text-muted-foreground' />
-                      <span>
-                        {home.bedrooms ? `${home.bedrooms} Bedrooms` : 'N/A'}
-                      </span>
-                    </div>
-                    <div className='flex items-center gap-2'>
-                      <Bath className='h-4 w-4 text-muted-foreground' />
-                      <span>
-                        {home.bathrooms ? `${home.bathrooms} Bathrooms` : 'N/A'}
-                      </span>
-                    </div>
-                    <div className='flex items-center gap-2'>
-                      <Square className='h-4 w-4 text-muted-foreground' />
-                      <span>{home.sqft ? `${home.sqft} sq ft` : 'N/A'}</span>
-                    </div>
-                    <div className='flex items-center gap-2'>
-                      <MapPin className='h-4 w-4 text-muted-foreground' />
-                      <span>{home.lot}</span>
+                    {/* Home info overlay */}
+                    <div className='absolute top-3 right-3'>
+                      <Badge className={getStatusColor(home.status)}>
+                        {home.status}
+                      </Badge>
                     </div>
                   </div>
 
-                  {/* Actions */}
-                  <div className='flex gap-2 pt-4'>
-                    <Button className='flex-1' href={home.url}>
-                      <Eye className='h-4 w-4 mr-2' />
-                      View Details
-                    </Button>
-                    <Button variant='outline' size='sm' href={home.contact}>
-                      Schedule Tour
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                  <CardHeader>
+                    <div className='flex justify-between items-start'>
+                      <div>
+                        <CardTitle className='text-xl'>{home.name}</CardTitle>
+                        <CardDescription className='text-2xl font-bold text-primary mt-1'>
+                          {home.price}
+                        </CardDescription>
+                      </div>
+                    </div>
+                  </CardHeader>
+
+                  <CardContent className='space-y-4'>
+                    {/* Home Stats */}
+                    <div className='grid grid-cols-2 gap-4 text-sm'>
+                      <div className='flex items-center gap-2'>
+                        <Bed className='h-4 w-4 text-muted-foreground' />
+                        <span>
+                          {home.bedrooms ? `${home.bedrooms} Bedrooms` : 'N/A'}
+                        </span>
+                      </div>
+                      <div className='flex items-center gap-2'>
+                        <Bath className='h-4 w-4 text-muted-foreground' />
+                        <span>
+                          {home.bathrooms
+                            ? `${home.bathrooms} Bathrooms`
+                            : 'N/A'}
+                        </span>
+                      </div>
+                      <div className='flex items-center gap-2'>
+                        <Square className='h-4 w-4 text-muted-foreground' />
+                        <span>{home.sqft ? `${home.sqft} sq ft` : 'N/A'}</span>
+                      </div>
+                      <div className='flex items-center gap-2'>
+                        <MapPin className='h-4 w-4 text-muted-foreground' />
+                        <span>{home.lot}</span>
+                      </div>
+                    </div>
+
+                    {/* Actions */}
+                    <div className='flex gap-2 pt-4'>
+                      <Button className='flex-1' href={home.url}>
+                        <Eye className='h-4 w-4 mr-2' />
+                        View Details
+                      </Button>
+                      <Button variant='outline' size='sm' href={home.contact}>
+                        Schedule Tour
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
           </div>
         </section>
 
