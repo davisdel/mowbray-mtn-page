@@ -24,17 +24,37 @@ export default function LocationPage() {
       icon: GraduationCap,
       places: [
         {
-          name: 'Riverside Elementary School',
-          distance: '0.8 miles',
-          rating: '9/10'
+          name: 'Soddy Daisy Middle/High School',
+          distance: '9.4 miles',
+          rating: '19 minutes away'
         },
         {
-          name: 'Community Middle School',
-          distance: '1.2 miles',
-          rating: '8/10'
+          name: 'Soddy Elementary School',
+          distance: '9.4 miles',
+          rating: '20 minutes away'
         },
-        { name: 'Heritage High School', distance: '2.1 miles', rating: '9/10' },
-        { name: 'State University', distance: '8.5 miles', rating: 'Top Rated' }
+        {
+          name: 'Ivy Academy',
+          distance: '9.9 miles',
+          rating: '19 minutes away'
+        },
+        { name: 'Baylor School', distance: '22.2 miles', rating: '35 minutes' },
+        { name: 'McCallie School', distance: '27.6', rating: '46 minutes' },
+        {
+          name: 'Girls Preparatory School',
+          distance: '24.7 miles',
+          rating: '39 minutes'
+        },
+        {
+          name: 'Chattanooga Christian School',
+          distance: '26.8 miles',
+          rating: '39 minutes'
+        },
+        {
+          name: 'University of Tennessee at Chattanooga',
+          distance: '24.6 miles',
+          rating: '38 minutes'
+        }
       ]
     },
     {
@@ -42,59 +62,65 @@ export default function LocationPage() {
       icon: ShoppingBag,
       places: [
         {
-          name: 'Village Shopping Center',
+          name: 'Walmart Supercenter of Dunlap',
           distance: '1.5 miles',
-          rating: '4.5★'
+          rating: '17 minutes away'
         },
-        { name: 'Downtown District', distance: '3.2 miles', rating: '4.7★' },
-        { name: 'Riverside Café', distance: '0.9 miles', rating: '4.6★' },
-        { name: 'Premium Outlets', distance: '12 miles', rating: '4.4★' }
+        { name: 'Food City', distance: '8.2 miles', rating: '16 minutes away' },
+        {
+          name: 'Tractor Supply of Dunlap',
+          distance: '15.5 miles',
+          rating: '21 minutes away'
+        },
+        {
+          name: 'Tractor Supply of Soddy',
+          distance: '8.3 miles',
+          rating: '17 minutes away'
+        }
       ]
     },
     {
-      category: 'Healthcare',
+      category: 'Healthcare and Emergency Services',
       icon: Stethoscope,
       places: [
         {
-          name: 'Community Medical Center',
-          distance: '2.8 miles',
-          rating: '4.5★'
+          name: 'Erlanger - Sequatchie Valley',
+          distance: '12.8 miles',
+          rating: '17 minutes away'
         },
-        { name: 'Urgent Care Clinic', distance: '1.7 miles', rating: '4.3★' },
         {
-          name: 'Riverside Family Practice',
-          distance: '1.1 miles',
-          rating: '4.6★'
+          name: 'CHI Memorial Hospital - Hixson',
+          distance: '16.3 miles',
+          rating: '31 minutes away'
         },
-        { name: 'Regional Hospital', distance: '6.2 miles', rating: '4.7★' }
+        {
+          name: 'Mowbray Volunteer Fire Department',
+          distance: '3.2 miles',
+          rating: '5 minutes away'
+        }
       ]
     }
   ]
 
   const transportationOptions = [
     {
-      type: 'Highway Access',
+      type: 'Highway Entrance',
       icon: Car,
-      description: 'Direct access to I-75 and Highway 92',
-      time: '2 minutes'
+      description: 'Direct flat access from 111 to Henson Gap Rd',
+      time: '8 minutes'
     },
     {
-      type: 'Public Transit',
-      icon: Train,
-      description: 'Bus route with downtown connections',
+      type: 'Mountainous Entrance',
+      icon: Car,
+      description:
+        'Scenic route from Dayton Pike up Montlake Road or Mowbray Pike',
       time: '15 minutes'
     },
     {
       type: 'Airport',
       icon: Plane,
-      description: 'International Airport',
-      time: '35 minutes'
-    },
-    {
-      type: 'Train Station',
-      icon: Train,
-      description: 'Metro Rail System',
-      time: '20 minutes'
+      description: 'Chattanooga Airport',
+      time: '40 minutes'
     }
   ]
 
@@ -138,11 +164,17 @@ export default function LocationPage() {
 
               {/* Quick Actions */}
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-6'>
-                <Button variant='outline' className='h-12' href='https://maps.google.com/maps?ll=35.286874,-85.267829&z=14&t=h&hl=en&gl=US&mapclient=embed&q=3009%20Poe%20Rd%20Soddy-Daisy%2C%20TN%2037379'>
+                <Button
+                  variant='outline'
+                  className='h-12'
+                  href='https://maps.google.com/maps?ll=35.286874,-85.267829&z=14&t=h&hl=en&gl=US&mapclient=embed&q=3009%20Poe%20Rd%20Soddy-Daisy%2C%20TN%2037379'>
                   <Navigation className='h-4 w-4 mr-2' />
                   Get Directions
                 </Button>
-                <Button variant='outline' className='h-12' href='https://maps.app.goo.gl/sAU7qj87178MJGoC9'>
+                <Button
+                  variant='outline'
+                  className='h-12'
+                  href='https://maps.app.goo.gl/sAU7qj87178MJGoC9'>
                   <MapPin className='h-4 w-4 mr-2' />
                   Street View
                 </Button>
@@ -274,7 +306,6 @@ export default function LocationPage() {
             </div>
           ))}
         </section>
-
       </div>
     </div>
   )

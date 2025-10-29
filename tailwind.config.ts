@@ -62,6 +62,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				lotavailable: {
+					DEFAULT: '#CBDF88',
+				},
+				homeavailable: {
+					DEFAULT: '#B07E09',
+				},
+				pending: {
+					DEFAULT: '#FEC77C',
+				},
+				sold: {
+					DEFAULT: '#B0A690',
 				}
 			},
 			backgroundImage: {

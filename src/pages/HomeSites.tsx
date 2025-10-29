@@ -44,14 +44,14 @@ export default function HomeSitesPage() {
   }
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'Available':
-        return 'bg-accent text-accent-foreground'
-      case 'Coming Soon':
-        return 'bg-primary text-primary-foreground'
+      case 'Lot Available':
+        return 'bg-lotavailable text-accent-foreground'
+      case 'Home Available':
+        return 'bg-homeavailable text-primary-foreground'
       case 'Pending':
-        return 'bg-muted text-muted-foreground'
+        return 'bg-pending text-muted-foreground'
       default:
-        return 'bg-secondary text-secondary-foreground'
+        return 'bg-sold text-secondary-foreground'
     }
   }
 
@@ -110,35 +110,28 @@ export default function HomeSitesPage() {
                     className='inline-block w-4 h-4 rounded-full'
                     style={{ background: '#CBDF88' }}
                   />
-                  <span className='text-sm'>Available</span>
+                  <span className='text-sm'>Lot Available</span>
                 </div>
                 <div className='flex items-center gap-2'>
                   <span
                     className='inline-block w-4 h-4 rounded-full'
-                    style={{ background: '#c2c2c2ff' }}
+                    style={{ background: '#B07E09' }}
                   />
-                  <span className='text-sm'>Sold</span>
+                  <span className='text-sm'>Home Available</span>
                 </div>
                 <div className='flex items-center gap-2'>
                   <span
                     className='inline-block w-4 h-4 rounded-full'
-                    style={{ background: 'rgba(241, 240, 160, 1)' }}
+                    style={{ background: '#FEC77C' }}
                   />
                   <span className='text-sm'>Pending</span>
                 </div>
                 <div className='flex items-center gap-2'>
                   <span
                     className='inline-block w-4 h-4 rounded-full'
-                    style={{ background: '#A0D8EF' }}
+                    style={{ background: '#B0A690' }}
                   />
-                  <span className='text-sm'>Coming Soon</span>
-                </div>
-                <div className='flex items-center gap-2'>
-                  <span
-                    className='inline-block w-4 h-4 rounded-full'
-                    style={{ background: 'rgba(255, 166, 169, 1)' }}
-                  />
-                  <span className='text-sm'>Lot</span>
+                  <span className='text-sm'>Sold</span>
                 </div>
               </div>
             </CardFooter>

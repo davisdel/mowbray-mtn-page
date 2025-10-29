@@ -1,6 +1,6 @@
 import React from 'react'
 
-type SiteStatus = 'available' | 'sold' | 'pending' | 'lot' | 'coming soon'
+type SiteStatus = 'sold' | 'lot available' | 'home available' | 'pending'
 type SiteStatusItem = { id: number; status: SiteStatus }
 type SubdivisionMapProps = {
   onSiteClick?: (id: number) => void
@@ -9,11 +9,10 @@ type SubdivisionMapProps = {
 
 // Define your colors for each status
 const STATUS_COLORS: Record<SiteStatus, string> = {
-  available: '#CBDF88',
-  sold: '#c2c2c2ff',
-  pending: 'rgba(241, 240, 160, 1)',
-  'coming soon': '#A0D8EF',
-  lot: 'rgba(255, 166, 169, 1)'
+  'home available': '#B07E09',
+  'sold': '#B0A690',
+  pending: '#FEC77C',
+  'lot available': '#CBDF88'
 }
 
 /**

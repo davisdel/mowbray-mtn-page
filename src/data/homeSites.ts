@@ -1,4 +1,4 @@
-export type HomeSiteStatus = 'Available' | 'Pending' | 'Sold' | 'Coming Soon' | 'Lot'
+export type HomeSiteStatus = 'Pending' | 'Sold' | 'Home Available' | 'Lot Available'
 
 export interface HomeSite {
   id: number
@@ -17,16 +17,16 @@ export interface HomeSite {
 export const initialHomeSites: HomeSite[] = [
   {
     "id": 1,
-    "name": "Lot 1",
-    "price": "$80,000",
-    "bedrooms": null,
-    "bathrooms": null,
-    "sqft": null,
-    "lot": "1.02 acres",
-    "status": "Coming Soon",
-    "url": "",
-    "img": "",
-    "contact": ""
+    "name": "2740 Mowbray Pike, Soddy Daisy, TN 37379",
+    "price": "$705,000",
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "sqft": '2,627',
+    "lot": "0.78 acres",
+    "status": "Home Available",
+    "url": "https://www.zillow.com/homedetails/2740-Mowbray-Pike-Soddy-Daisy-TN-37379/449944663_zpid/",
+    "img": "a0eca047c1349fc26a8c81a187d1a7bb-cc_ft_768.webp",
+    "contact": "https://www.zillow.com/homedetails/2740-Mowbray-Pike-Soddy-Daisy-TN-37379/449944663_zpid/"
   },
   {
     "id": 2,
@@ -36,7 +36,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.32 acres",
-    "status": "Coming Soon",
+    "status": "Home Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -49,36 +49,36 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.34 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
   },
   {
-    id: 4,
-    name: '2772 Mowbray Pike, Soddy Daisy, TN 37379',
-    price: '$639,500',
-    bedrooms: 4,
-    bathrooms: 4,
-    sqft: '2,358',
-    lot: '0.64 acre',
-    status: 'Available',
-    url: 'https://www.zillow.com/homedetails/2772-Mowbray-Pike-Soddy-Daisy-TN-37379/449944568_zpid/',
-    img: '80048f0eb0192470d228dbb7f0db7756-cc_ft_768.webp',
-    contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
-  },
-  {
-    "id": 5,
-    "name": "Lot 5",
-    "price": "$70,000",
+    "id": 4,
+    "name": "Lot 4",
+    "price": "$95,000",
     "bedrooms": null,
     "bathrooms": null,
     "sqft": null,
     "lot": "0.64 acres",
-    "status": "Coming Soon",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
+  },
+  {
+    id: 5,
+    name: '2772 Mowbray Pike, Soddy Daisy, TN 37379',
+    price: '$625,500',
+    bedrooms: 4,
+    bathrooms: 4,
+    sqft: '2,358',
+    lot: '0.64 acre',
+    status: 'Home Available',
+    url: 'https://www.zillow.com/homedetails/2772-Mowbray-Pike-Soddy-Daisy-TN-37379/449944568_zpid/',
+    img: '80048f0eb0192470d228dbb7f0db7756-cc_ft_768.webp',
+    contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
   },
   {
     "id": 6,
@@ -88,7 +88,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.61 acres",
-    "status": "Coming Soon",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -96,12 +96,12 @@ export const initialHomeSites: HomeSite[] = [
   {
     id: 7,
     name: '2796 Mowbray Pike, Soddy Daisy, TN 37379',
-    price: '$658,900',
+    price: '$644,900',
     bedrooms: 3,
     bathrooms: 3,
     sqft: '2,481',
     lot: '1.12 acre',
-    status: 'Available',
+    status: 'Home Available',
     url: 'https://www.zillow.com/homedetails/2796-Mowbray-Pike-Soddy-Daisy-TN-37379/449944466_zpid/',
     img: '16109e525ab87371b4fe844586109ba0-cc_ft_768.webp',
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -114,7 +114,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.12 acres",
-    "status": "Coming Soon",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -127,7 +127,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.07 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -140,7 +140,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.02 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -153,7 +153,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.97 acres",
-    "status": "Coming Soon",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -166,7 +166,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.1 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -179,7 +179,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.93 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -192,7 +192,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.77 acres",
-    "status": "Coming Soon",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -205,7 +205,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.73 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -218,7 +218,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.04 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -231,7 +231,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.48 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -244,7 +244,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.12 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -270,7 +270,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.58 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -283,7 +283,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.76 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -296,7 +296,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.67 acres",
-    "status": "Coming Soon",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -309,7 +309,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.85 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -322,7 +322,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.73 acres",
-    "status": "Coming Soon",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -335,7 +335,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.65 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -348,7 +348,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.9 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -361,7 +361,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.97 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -374,7 +374,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.97 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -387,7 +387,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.89 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -400,7 +400,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.94 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -413,7 +413,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.91 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -426,23 +426,23 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.03 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
   },
   {
     "id": 33,
-    "name": "Lot 33",
-    "price": "$70,000",
-    "bedrooms": null,
-    "bathrooms": null,
-    "sqft": null,
+    "name": "2996 Mowbray Pike, Soddy Daisy, TN 37379",
+    "price": "$695,000",
+    "bedrooms": 3,
+    "bathrooms": 3,
+    "sqft": "2,503",
     "lot": "0.61 acres",
-    "status": "Coming Soon",
-    "url": "",
-    "img": "",
-    "contact": ""
+    "status": "Home Available",
+    "url": "https://www.zillow.com/homedetails/2996-Mowbray-Pike-Soddy-Daisy-TN-37379/449944453_zpid/",
+    "img": "0cd48ba42d98b152c71e975bb61384d5-cc_ft_768.webp",
+    "contact": "https://www.zillow.com/homedetails/2996-Mowbray-Pike-Soddy-Daisy-TN-37379/449944453_zpid/"
   },
   {
     "id": 34,
@@ -452,7 +452,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.61 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -465,7 +465,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.61 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -478,7 +478,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.62 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -504,7 +504,7 @@ export const initialHomeSites: HomeSite[] = [
     bathrooms: 4,
     sqft: '3,183',
     lot: '0.95 acre',
-    status: 'Available',
+    status: 'Home Available',
     url: 'https://www.zillow.com/homedetails/3087-Poe-Rd-Soddy-Daisy-TN-37379/442076894_zpid/',
     img: 'd014e8149fbd31345157d88b324bf382-cc_ft_768.webp',
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -517,7 +517,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.13 acres",
-    "status": "Coming Soon",
+    "status": "Home Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -527,7 +527,7 @@ export const initialHomeSites: HomeSite[] = [
     name: '3075 Poe Rd, Soddy Daisy, TN 37379',
     price: '$90,000',
     lot: '1.17 acre',
-    status: 'Available',
+    status: 'Lot Available',
     url: 'https://www.zillow.com/homedetails/3075-Poe-Rd-Soddy-Daisy-TN-37379/449944369_zpid/',
     img: '167b51e4c6836708d02afe8fe7a312e0-cc_ft_768.webp',
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -535,12 +535,12 @@ export const initialHomeSites: HomeSite[] = [
   {
     id: 41,
     name: '3069 Poe Rd, Soddy Daisy, TN 37379',
-    price: '$775,000',
+    price: '$750,000',
     bedrooms: 4,
     bathrooms: 4,
     sqft: '2,932',
     lot: '1 acre',
-    status: 'Available',
+    status: 'Home Available',
     url: 'https://www.zillow.com/homedetails/3069-Poe-Rd-Soddy-Daisy-TN-37379/444348372_zpid/',
     img: '99e64b41f7332d76914d3740b622a6f4-cc_ft_768.webp',
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -553,23 +553,23 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.01 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
   },
   {
     "id": 43,
-    "name": "Lot 43",
-    "price": "$85,000",
-    "bedrooms": null,
-    "bathrooms": null,
-    "sqft": null,
-    "lot": "1.05 acres",
-    "status": "Coming Soon",
-    "url": "",
-    "img": "",
-    "contact": ""
+    "name": "3057 Poe Rd, Soddy Daisy, TN 37379",
+    "price": "$665,000",
+    "bedrooms": 3,
+    "bathrooms": 4,
+    "sqft": "2,274",
+    "lot": "1.07 acres",
+    "status": "Home Available",
+    "url": "https://www.zillow.com/homedetails/3057-Poe-Rd-Soddy-Daisy-TN-37379/449944467_zpid/",
+    "img": "7300ecf71e33b36c66409fa7143b6c28-cc_ft_768.webp",
+    "contact": "https://www.zillow.com/homedetails/3057-Poe-Rd-Soddy-Daisy-TN-37379/449944467_zpid/"
   },
   {
     "id": 44,
@@ -579,7 +579,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.19 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -592,7 +592,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.37 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -605,7 +605,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.49 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -618,7 +618,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.42 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -631,7 +631,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.33 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -644,7 +644,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.24 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -657,7 +657,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.16 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
@@ -683,7 +683,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.35 acres",
-    "status": "Available",
+    "status": "Lot Available",
     "url": "",
     "img": "",
     "contact": ""
