@@ -26,7 +26,7 @@ export const initialHomeSites: HomeSite[] = [
     "status": "Home Available",
     "url": "https://www.zillow.com/homedetails/2740-Mowbray-Pike-Soddy-Daisy-TN-37379/449944663_zpid/",
     "img": "a0eca047c1349fc26a8c81a187d1a7bb-cc_ft_768.webp",
-    "contact": "https://www.zillow.com/homedetails/2740-Mowbray-Pike-Soddy-Daisy-TN-37379/449944663_zpid/"
+    "contact": "https://www.lambproperties.com/"
   },
   {
     "id": 2,
@@ -78,7 +78,7 @@ export const initialHomeSites: HomeSite[] = [
     status: 'Home Available',
     url: 'https://www.zillow.com/homedetails/2772-Mowbray-Pike-Soddy-Daisy-TN-37379/449944568_zpid/',
     img: '80048f0eb0192470d228dbb7f0db7756-cc_ft_768.webp',
-    contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
+    contact: 'https://homesrep.com/agent/mark-blazek'
   },
   {
     "id": 6,
@@ -94,21 +94,8 @@ export const initialHomeSites: HomeSite[] = [
     "contact": ""
   },
   {
-    id: 7,
-    name: '2796 Mowbray Pike, Soddy Daisy, TN 37379',
-    price: '$644,900',
-    bedrooms: 3,
-    bathrooms: 3,
-    sqft: '2,481',
-    lot: '1.12 acre',
-    status: 'Home Available',
-    url: 'https://www.zillow.com/homedetails/2796-Mowbray-Pike-Soddy-Daisy-TN-37379/449944466_zpid/',
-    img: '16109e525ab87371b4fe844586109ba0-cc_ft_768.webp',
-    contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
-  },
-  {
-    "id": 8,
-    "name": "Lot 8",
+    "id": 7,
+    "name": "Lot 7",
     "price": "$80,000",
     "bedrooms": null,
     "bathrooms": null,
@@ -118,6 +105,19 @@ export const initialHomeSites: HomeSite[] = [
     "url": "",
     "img": "",
     "contact": ""
+  },
+  {
+    id: 8,
+    name: '2796 Mowbray Pike, Soddy Daisy, TN 37379',
+    price: '$644,900',
+    bedrooms: 3,
+    bathrooms: 3,
+    sqft: '2,481',
+    lot: '1.12 acre',
+    status: 'Home Available',
+    url: 'https://www.zillow.com/homedetails/2796-Mowbray-Pike-Soddy-Daisy-TN-37379/449944466_zpid/',
+    img: '16109e525ab87371b4fe844586109ba0-cc_ft_768.webp',
+    contact: 'https://homesrep.com/agent/mark-blazek'
   },
   {
     "id": 9,
@@ -442,7 +442,7 @@ export const initialHomeSites: HomeSite[] = [
     "status": "Home Available",
     "url": "https://www.zillow.com/homedetails/2996-Mowbray-Pike-Soddy-Daisy-TN-37379/449944453_zpid/",
     "img": "0cd48ba42d98b152c71e975bb61384d5-cc_ft_768.webp",
-    "contact": "https://www.zillow.com/homedetails/2996-Mowbray-Pike-Soddy-Daisy-TN-37379/449944453_zpid/"
+    "contact": "https://www.lambproperties.com/"
   },
   {
     "id": 34,
@@ -520,7 +520,7 @@ export const initialHomeSites: HomeSite[] = [
     "status": "Home Available",
     "url": "",
     "img": "",
-    "contact": ""
+    "contact": "https://www.lambproperties.com/"
   },
   {
     id: 40,
@@ -569,7 +569,7 @@ export const initialHomeSites: HomeSite[] = [
     "status": "Home Available",
     "url": "https://www.zillow.com/homedetails/3057-Poe-Rd-Soddy-Daisy-TN-37379/449944467_zpid/",
     "img": "7300ecf71e33b36c66409fa7143b6c28-cc_ft_768.webp",
-    "contact": "https://www.zillow.com/homedetails/3057-Poe-Rd-Soddy-Daisy-TN-37379/449944467_zpid/"
+    "contact": "https://www.lambproperties.com/"
   },
   {
     "id": 44,
