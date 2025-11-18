@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   Card,
   CardContent,
@@ -18,7 +18,8 @@ import {
   Square,
   Eye,
   ArrowBigDown,
-  ArrowBigUp
+  ArrowBigUp,
+  CameraOff
 } from 'lucide-react'
 
 import { initialHomeSites, HomeSite } from '@/data/homeSites'
@@ -28,6 +29,20 @@ export default function HomeSitesPage() {
   const [homeSites, setHomeSites] = useState<HomeSite[]>(initialHomeSites)
   const [highlightedId, setHighlightedId] = useState<number | null>(null)
   const cardRefs = React.useRef<Record<number, HTMLDivElement | null>>({})
+  // Back to Top button visibility
+  const [showBackToTop, setShowBackToTop] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 100)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const handleBackToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   // Callback for map click
   const handleMapClick = (id: number) => {
@@ -91,12 +106,14 @@ export default function HomeSitesPage() {
                       onSiteClick={handleMapClick}
                       siteStatusList={homeSites.map((site) => ({
                         id: site.id,
-                        status: site.status.toLowerCase() as
-                          | 'available'
-                          | 'sold'
-                          | 'pending'
-                          | 'coming soon'
-                          | 'lot'
+                        status:
+                          site.status === 'Lot Available'
+                            ? 'lot available'
+                            : site.status === 'Home Available'
+                              ? 'home available'
+                              : site.status === 'Pending'
+                                ? 'pending'
+                                : 'sold'
                       }))}
                     />
                   </div>
@@ -189,16 +206,15 @@ export default function HomeSitesPage() {
           </div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {homeSites
-              .filter((home) => !!home.url)
-              .map((home) => (
-                <Card
-                  key={home.id}
-                  ref={(el) => (cardRefs.current[home.id] = el)}
-                  className={`shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 group ${highlightedId === home.id ? 'ring-4 ring-primary' : ''}`}>
-                  <div className='relative'>
-                    {/* Home image card */}
-                    <div className='w-full h-48 rounded-t-lg overflow-hidden flex items-center justify-center bg-gray-100'>
+            {homeSites.map((home) => (
+              <Card
+                key={home.id}
+                ref={(el) => (cardRefs.current[home.id] = el)}
+                className={`shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 group flex flex-col ${highlightedId === home.id ? 'ring-4 ring-primary' : ''}`}>
+                <div className='relative'>
+                  {/* Home image card or placeholder */}
+                  <div className='w-full h-48 rounded-t-lg overflow-hidden flex items-center justify-center bg-gray-200'>
+                    {home.img ? (
                       <img
                         src={
                           home.img.startsWith('http')
@@ -208,66 +224,71 @@ export default function HomeSitesPage() {
                         alt={home.name}
                         className='object-cover w-full h-full'
                       />
+                    ) : (
+                      <div className='flex flex-col items-center justify-center w-full h-full text-gray-400'>
+                        <CameraOff className='h-10 w-10 mb-2' />
+                        <span className='text-sm'>No Photo Available</span>
+                      </div>
+                    )}
+                  </div>
+                  {/* Home info overlay */}
+                  <div className='absolute top-3 right-3'>
+                    <Badge className={getStatusColor(home.status)}>
+                      {home.status}
+                    </Badge>
+                  </div>
+                </div>
+
+                <CardHeader>
+                  <div className='flex justify-between items-start'>
+                    <div>
+                      <CardTitle className='text-xl'>{home.name}</CardTitle>
+                      <CardDescription className='text-2xl font-bold text-primary mt-1'>
+                        {home.price}
+                      </CardDescription>
                     </div>
-                    {/* Home info overlay */}
-                    <div className='absolute top-3 right-3'>
-                      <Badge className={getStatusColor(home.status)}>
-                        {home.status}
-                      </Badge>
+                  </div>
+                </CardHeader>
+
+                <CardContent className='space-y-4 flex-1 flex flex-col'>
+                  {/* Home Stats */}
+                  <div className='grid grid-cols-2 gap-4 text-sm'>
+                    <div className='flex items-center gap-2'>
+                      <Bed className='h-4 w-4 text-muted-foreground' />
+                      <span>
+                        {home.bedrooms ? `${home.bedrooms} Bedrooms` : 'N/A'}
+                      </span>
+                    </div>
+                    <div className='flex items-center gap-2'>
+                      <Bath className='h-4 w-4 text-muted-foreground' />
+                      <span>
+                        {home.bathrooms ? `${home.bathrooms} Bathrooms` : 'N/A'}
+                      </span>
+                    </div>
+                    <div className='flex items-center gap-2'>
+                      <Square className='h-4 w-4 text-muted-foreground' />
+                      <span>{home.sqft ? `${home.sqft} sq ft` : 'N/A'}</span>
+                    </div>
+                    <div className='flex items-center gap-2'>
+                      <MapPin className='h-4 w-4 text-muted-foreground' />
+                      <span>{home.lot}</span>
                     </div>
                   </div>
 
-                  <CardHeader>
-                    <div className='flex justify-between items-start'>
-                      <div>
-                        <CardTitle className='text-xl'>{home.name}</CardTitle>
-                        <CardDescription className='text-2xl font-bold text-primary mt-1'>
-                          {home.price}
-                        </CardDescription>
-                      </div>
-                    </div>
-                  </CardHeader>
-
-                  <CardContent className='space-y-4'>
-                    {/* Home Stats */}
-                    <div className='grid grid-cols-2 gap-4 text-sm'>
-                      <div className='flex items-center gap-2'>
-                        <Bed className='h-4 w-4 text-muted-foreground' />
-                        <span>
-                          {home.bedrooms ? `${home.bedrooms} Bedrooms` : 'N/A'}
-                        </span>
-                      </div>
-                      <div className='flex items-center gap-2'>
-                        <Bath className='h-4 w-4 text-muted-foreground' />
-                        <span>
-                          {home.bathrooms
-                            ? `${home.bathrooms} Bathrooms`
-                            : 'N/A'}
-                        </span>
-                      </div>
-                      <div className='flex items-center gap-2'>
-                        <Square className='h-4 w-4 text-muted-foreground' />
-                        <span>{home.sqft ? `${home.sqft} sq ft` : 'N/A'}</span>
-                      </div>
-                      <div className='flex items-center gap-2'>
-                        <MapPin className='h-4 w-4 text-muted-foreground' />
-                        <span>{home.lot}</span>
-                      </div>
-                    </div>
-
-                    {/* Actions */}
-                    <div className='flex gap-2 pt-4'>
-                      <Button className='flex-1' href={home.url}>
-                        <Eye className='h-4 w-4 mr-2' />
-                        View Details
-                      </Button>
-                      <Button variant='outline' size='sm' href={home.contact}>
-                        Schedule Tour
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+                  <div className='flex-1'></div>
+                  {/* Actions */}
+                  <div className='flex gap-2 pt-4'>
+                    <Button className='flex-1' href={home.url}>
+                      <Eye className='h-4 w-4 mr-2' />
+                      View Details
+                    </Button>
+                    <Button variant='outline' size='sm' href={home.contact}>
+                      Schedule Tour
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </section>
 
@@ -288,6 +309,16 @@ export default function HomeSitesPage() {
           </div>
         </section>
       </div>
+      {/* Back to Top Button */}
+      {showBackToTop && (
+        <button
+          onClick={handleBackToTop}
+          className='fixed bottom-6 right-6 z-50 bg-primary text-primary-foreground px-4 py-3 rounded-full shadow-xl flex items-center gap-2 hover:bg-primary/90 transition-all duration-200'
+          aria-label='Back to Top'>
+          <ArrowBigUp className='h-5 w-5' />
+          <span className='font-semibold'>Back to Top</span>
+        </button>
+      )}
     </div>
   )
 }
