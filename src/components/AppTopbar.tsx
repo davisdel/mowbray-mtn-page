@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom'
 const navigationItems = [
   { title: 'Home', url: '/', icon: Home },
   { title: 'About', url: '/about', icon: Info },
-  { title: 'Photos', url: '/photos', icon: Camera },
   { title: 'Home Sites', url: '/home-sites', icon: MapPin },
   { title: 'Amenities', url: '/amenities', icon: Building },
   { title: 'Location', url: '/location', icon: Navigation }
