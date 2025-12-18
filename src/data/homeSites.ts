@@ -18,7 +18,7 @@ export const initialHomeSites: HomeSite[] = [
   {
     "id": 1,
     "name": "2740 Mowbray Pike, Soddy Daisy, TN 37379",
-    "price": "$695,000",
+    "price": "$674,000",
     "bedrooms": 4,
     "bathrooms": 4,
     "sqft": '2,627',
@@ -31,13 +31,13 @@ export const initialHomeSites: HomeSite[] = [
   {
     "id": 2,
     "name": "2748 Mowbray Pike, Soddy Daisy, TN 37379",
-    "price": "$695,000",
+    "price": "$650,000",
     "bedrooms": 4,
     "bathrooms": 4,
     "sqft": "2,797",
     "lot": "1.33 acres",
     "status": "Home Available",
-    url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
+    url: 'https://www.zillow.com/homedetails/2748-Mowbray-Pike-Soddy-Daisy-TN-37379/448374313_zpid/',
     "img": "8b7b80a2f5d261c2dacfe09c767f7657-cc_ft_768.webp",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
   },
@@ -434,7 +434,7 @@ export const initialHomeSites: HomeSite[] = [
   {
     "id": 33,
     "name": "2996 Mowbray Pike, Soddy Daisy, TN 37379",
-    "price": "$695,000",
+    "price": "$667,500",
     "bedrooms": 3,
     "bathrooms": 3,
     "sqft": "2,503",
@@ -499,7 +499,7 @@ export const initialHomeSites: HomeSite[] = [
   {
     id: 38,
     name: '3087 Poe Rd, Soddy Daisy, TN 37379',
-    price: '$725,000',
+    price: '$699,000',
     bedrooms: 4,
     bathrooms: 4,
     sqft: '3,183',
@@ -535,7 +535,7 @@ export const initialHomeSites: HomeSite[] = [
   {
     id: 41,
     name: '3069 Poe Rd, Soddy Daisy, TN 37379',
-    price: '$750,000',
+    price: '$699,000',
     bedrooms: 4,
     bathrooms: 4,
     sqft: '2,932',
@@ -561,7 +561,7 @@ export const initialHomeSites: HomeSite[] = [
   {
     "id": 43,
     "name": "3057 Poe Rd, Soddy Daisy, TN 37379",
-    "price": "$665,000",
+    "price": "$650,000",
     "bedrooms": 3,
     "bathrooms": 4,
     "sqft": "2,274",
