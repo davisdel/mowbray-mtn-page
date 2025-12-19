@@ -387,7 +387,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.89 acres",
-    "status": "Lot Available",
+    "status": "Home Available",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
     "img": "",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -555,7 +555,7 @@ export const initialHomeSites: HomeSite[] = [
     "lot": "1.01 acres",
     "status": "Lot Available",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
-    "img": "",
+    "img": "528372995-f312b0b1-fd29-4cd1-96ff-30ba07a59d9c.webp",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
   },
   {
@@ -581,7 +581,7 @@ export const initialHomeSites: HomeSite[] = [
     "lot": "1.19 acres",
     "status": "Lot Available",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
-    "img": "",
+    "img": "528372988-c453b2ba-a5af-4200-b735-376e72611fe5.webp",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
   },
   {
@@ -594,7 +594,7 @@ export const initialHomeSites: HomeSite[] = [
     "lot": "1.37 acres",
     "status": "Lot Available",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
-    "img": "",
+    "img": "528372993-c234770c-ce36-447a-80a4-fe3cd2af13a6.webp",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
   },
   {
@@ -607,7 +607,7 @@ export const initialHomeSites: HomeSite[] = [
     "lot": "1.49 acres",
     "status": "Lot Available",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
-    "img": "",
+    "img": "528372989-0c916dae-9461-4cbc-b029-b15d4a822713.webp",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
   },
   {
@@ -620,7 +620,7 @@ export const initialHomeSites: HomeSite[] = [
     "lot": "1.42 acres",
     "status": "Lot Available",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
-    "img": "",
+    "img": "528372990-ec75b8f5-8048-4222-88d3-0c55ae6bb334.webp",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
   },
   {
@@ -633,7 +633,7 @@ export const initialHomeSites: HomeSite[] = [
     "lot": "1.33 acres",
     "status": "Lot Available",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
-    "img": "",
+    "img": "528372992-77851d5b-92f0-46d0-8a35-4d31ef1ce137.webp",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
   },
   {
@@ -644,7 +644,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.24 acres",
-    "status": "Lot Available",
+    "status": "Sold",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
     "img": "",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -657,7 +657,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.16 acres",
-    "status": "Lot Available",
+    "status": "Sold",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
     "img": "",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -685,7 +685,7 @@ export const initialHomeSites: HomeSite[] = [
     "lot": "1.35 acres",
     "status": "Lot Available",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
-    "img": "",
+    "img": "528372991-42a397ce-ee05-46d2-bd97-e866f6071254.webp",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
   }
 ]
