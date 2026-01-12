@@ -88,7 +88,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.61 acres",
-    "status": "Lot Available",
+    "status": "Sold",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
     "img": "lot 6.gif",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -101,9 +101,9 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.12 acres",
-    "status": "Lot Available",
+    "status": "Sold",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
-    "img": "lot 7.gif",
+    "img": "530236652-6b0d1993-5fc7-47b7-bffb-b57486b8dd8c.webp",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
   },
   {
@@ -153,7 +153,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.97 acres",
-    "status": "Lot Available",
+    "status": "Home Available",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
     "img": "",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -192,7 +192,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.77 acres",
-    "status": "Lot Available",
+    "status": "Home Available",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
     "img": "",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -296,7 +296,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.67 acres",
-    "status": "Lot Available",
+    "status": "Home Available",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
     "img": "",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -322,7 +322,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.73 acres",
-    "status": "Lot Available",
+    "status": "Home Available",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
     "img": "",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -381,15 +381,15 @@ export const initialHomeSites: HomeSite[] = [
   },
   {
     "id": 29,
-    "name": "Lot 29",
-    "price": "$85,000",
-    "bedrooms": null,
-    "bathrooms": null,
-    "sqft": null,
-    "lot": "0.89 acres",
+    "name": "2964 Mowbray Pike, Soddy Daisy, TN 37379",
+    "price": "$775,000",
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "sqft": "3,066",
+    "lot": "0.97 acres",
     "status": "Home Available",
-    url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
-    "img": "",
+    url: 'https://www.zillow.com/homedetails/2964-Mowbray-Pike-Soddy-Daisy-TN-37379/449944672_zpid/',
+    "img": "88260fa47224f2a92158054831bdb33c-cc_ft_768.webp",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
   },
   {
