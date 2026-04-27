@@ -23,7 +23,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": 4,
     "sqft": '2,627',
     "lot": "0.78 acres",
-    "status": "Home Available",
+    "status": "Sold",
     "url": "https://www.zillow.com/homedetails/2740-Mowbray-Pike-Soddy-Daisy-TN-37379/449944663_zpid/",
     "img": "a0eca047c1349fc26a8c81a187d1a7bb-cc_ft_768.webp",
     "contact": "https://www.lambproperties.com/"
@@ -36,7 +36,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": 4,
     "sqft": "2,797",
     "lot": "1.33 acres",
-    "status": "Home Available",
+    "status": "Sold",
     url: 'https://www.zillow.com/homedetails/2748-Mowbray-Pike-Soddy-Daisy-TN-37379/448374313_zpid/',
     "img": "8b7b80a2f5d261c2dacfe09c767f7657-cc_ft_768.webp",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -44,7 +44,7 @@ export const initialHomeSites: HomeSite[] = [
   {
     "id": 3,
     "name": "Lot 3",
-    "price": "$85,000",
+    "price": "$80,000",
     "bedrooms": null,
     "bathrooms": null,
     "sqft": null,
@@ -57,7 +57,7 @@ export const initialHomeSites: HomeSite[] = [
   {
     "id": 4,
     "name": "Lot 4",
-    "price": "$95,000",
+    "price": "$90,000",
     "bedrooms": null,
     "bathrooms": null,
     "sqft": null,
@@ -161,7 +161,7 @@ export const initialHomeSites: HomeSite[] = [
   {
     "id": 12,
     "name": "Lot 12",
-    "price": "$75,000",
+    "price": "$90,000",
     "bedrooms": null,
     "bathrooms": null,
     "sqft": null,
@@ -174,7 +174,7 @@ export const initialHomeSites: HomeSite[] = [
   {
     "id": 13,
     "name": "Lot 13",
-    "price": "$75,000",
+    "price": "$100,000",
     "bedrooms": null,
     "bathrooms": null,
     "sqft": null,
@@ -200,7 +200,7 @@ export const initialHomeSites: HomeSite[] = [
   {
     "id": 15,
     "name": "Lot 15",
-    "price": "$75,000",
+    "price": "$90,000",
     "bedrooms": null,
     "bathrooms": null,
     "sqft": null,
@@ -291,7 +291,7 @@ export const initialHomeSites: HomeSite[] = [
   {
     "id": 22,
     "name": "Lot 22",
-    "price": "$65,000",
+    "price": "$80,000",
     "bedrooms": null,
     "bathrooms": null,
     "sqft": null,
@@ -317,7 +317,7 @@ export const initialHomeSites: HomeSite[] = [
   {
     "id": 24,
     "name": "Lot 24",
-    "price": "$70,000",
+    "price": "$85,000",
     "bedrooms": null,
     "bathrooms": null,
     "sqft": null,
@@ -387,7 +387,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": 4,
     "sqft": "3,066",
     "lot": "0.97 acres",
-    "status": "Home Available",
+    "status": "Sold",
     url: 'https://www.zillow.com/homedetails/2964-Mowbray-Pike-Soddy-Daisy-TN-37379/449944672_zpid/',
     "img": "88260fa47224f2a92158054831bdb33c-cc_ft_768.webp",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -439,7 +439,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": 3,
     "sqft": "2,503",
     "lot": "0.61 acres",
-    "status": "Home Available",
+    "status": "Sold",
     "url": "https://www.zillow.com/homedetails/2996-Mowbray-Pike-Soddy-Daisy-TN-37379/449944453_zpid/",
     "img": "0cd48ba42d98b152c71e975bb61384d5-cc_ft_768.webp",
     "contact": "https://www.lambproperties.com/"
@@ -504,7 +504,7 @@ export const initialHomeSites: HomeSite[] = [
     bathrooms: 4,
     sqft: '3,183',
     lot: '0.95 acre',
-    status: 'Home Available',
+    status: 'Sold',
     url: 'https://www.zillow.com/homedetails/3087-Poe-Rd-Soddy-Daisy-TN-37379/442076894_zpid/',
     img: 'd014e8149fbd31345157d88b324bf382-cc_ft_768.webp',
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -517,7 +517,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.13 acres",
-    "status": "Home Available",
+    "status": "Sold",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
     "img": "",
     "contact": "https://www.lambproperties.com/"
@@ -540,7 +540,7 @@ export const initialHomeSites: HomeSite[] = [
     bathrooms: 4,
     sqft: '2,932',
     lot: '1 acre',
-    status: 'Home Available',
+    status: 'Sold',
     url: 'https://www.zillow.com/homedetails/3069-Poe-Rd-Soddy-Daisy-TN-37379/444348372_zpid/',
     img: '99e64b41f7332d76914d3740b622a6f4-cc_ft_768.webp',
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
