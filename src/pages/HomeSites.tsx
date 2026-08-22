@@ -213,7 +213,12 @@ export default function HomeSitesPage() {
                 className={`shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-1 group flex flex-col ${highlightedId === home.id ? 'ring-4 ring-primary' : ''}`}>
                 <div className='relative'>
                   {/* Home image card or placeholder */}
-                  <div className='w-full h-48 rounded-t-lg overflow-hidden flex items-center justify-center bg-gray-200'>
+                  <a
+                    href={home.url}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    aria-label={`View listing for ${home.name}`}
+                    className='flex h-48 w-full items-center justify-center overflow-hidden rounded-t-lg bg-gray-200 focus:outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-accent'>
                     {home.img ? (
                       <img
                         src={
@@ -222,7 +227,7 @@ export default function HomeSitesPage() {
                             : `/${home.img}`
                         }
                         alt={home.name}
-                        className='object-cover w-full h-full'
+                        className='h-full w-full object-cover transition-transform duration-500 group-hover:scale-105'
                       />
                     ) : (
                       <div className='flex flex-col items-center justify-center w-full h-full text-gray-400'>
@@ -230,7 +235,7 @@ export default function HomeSitesPage() {
                         <span className='text-sm'>No Photo Available</span>
                       </div>
                     )}
-                  </div>
+                  </a>
                   {/* Home info overlay */}
                   <div className='absolute top-3 right-3'>
                     <Badge className={getStatusColor(home.status)}>

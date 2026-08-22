@@ -18,7 +18,7 @@ export const initialHomeSites: HomeSite[] = [
   {
     "id": 1,
     "name": "2740 Mowbray Pike, Soddy Daisy, TN 37379",
-    "price": "$674,000",
+    "price": "$655,000",
     "bedrooms": 4,
     "bathrooms": 4,
     "sqft": '2,627',
@@ -31,7 +31,7 @@ export const initialHomeSites: HomeSite[] = [
   {
     "id": 2,
     "name": "2748 Mowbray Pike, Soddy Daisy, TN 37379",
-    "price": "$650,000",
+    "price": "$655,000",
     "bedrooms": 4,
     "bathrooms": 4,
     "sqft": "2,797",
@@ -70,7 +70,7 @@ export const initialHomeSites: HomeSite[] = [
   {
     id: 5,
     name: '2772 Mowbray Pike, Soddy Daisy, TN 37379',
-    price: '$625,500',
+    price: '$625,000',
     bedrooms: 4,
     bathrooms: 4,
     sqft: '2,358',
@@ -109,12 +109,12 @@ export const initialHomeSites: HomeSite[] = [
   {
     id: 8,
     name: '2796 Mowbray Pike, Soddy Daisy, TN 37379',
-    price: '$644,900',
+    price: '$645,000',
     bedrooms: 3,
     bathrooms: 3,
     sqft: '2,481',
     lot: '1.12 acre',
-    status: 'Home Available',
+    status: 'Pending',
     url: 'https://www.zillow.com/homedetails/2796-Mowbray-Pike-Soddy-Daisy-TN-37379/449944466_zpid/',
     img: '16109e525ab87371b4fe844586109ba0-cc_ft_768.webp',
     contact: 'https://homesrep.com/agent/mark-blazek'
@@ -382,7 +382,7 @@ export const initialHomeSites: HomeSite[] = [
   {
     "id": 29,
     "name": "2964 Mowbray Pike, Soddy Daisy, TN 37379",
-    "price": "$775,000",
+    "price": "$740,000",
     "bedrooms": 4,
     "bathrooms": 4,
     "sqft": "3,066",
@@ -434,7 +434,7 @@ export const initialHomeSites: HomeSite[] = [
   {
     "id": 33,
     "name": "2996 Mowbray Pike, Soddy Daisy, TN 37379",
-    "price": "$667,500",
+    "price": "$682,600",
     "bedrooms": 3,
     "bathrooms": 3,
     "sqft": "2,503",
@@ -499,7 +499,7 @@ export const initialHomeSites: HomeSite[] = [
   {
     id: 38,
     name: '3087 Poe Rd, Soddy Daisy, TN 37379',
-    price: '$699,000',
+    price: '$707,000',
     bedrooms: 4,
     bathrooms: 4,
     sqft: '3,183',
@@ -511,23 +511,23 @@ export const initialHomeSites: HomeSite[] = [
   },
   {
     "id": 39,
-    "name": "Lot 39",
-    "price": "$80,000",
-    "bedrooms": null,
-    "bathrooms": null,
-    "sqft": null,
-    "lot": "1.13 acres",
+    "name": "3081 Poe Rd, Soddy Daisy, TN 37379",
+    "price": "$675,000",
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "sqft": "2,724",
+    "lot": "1.11 acres",
     "status": "Sold",
-    url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
+    url: 'https://www.zillow.com/homedetails/3081-Poe-Rd-Soddy-Daisy-TN-37379/449944370_zpid/',
     "img": "",
     "contact": "https://www.lambproperties.com/"
   },
   {
     id: 40,
     name: '3075 Poe Rd, Soddy Daisy, TN 37379',
-    price: '$90,000',
+    price: '$775,000',
     lot: '1.17 acre',
-    status: 'Lot Available',
+    status: 'Home Available',
     url: 'https://www.zillow.com/homedetails/3075-Poe-Rd-Soddy-Daisy-TN-37379/449944369_zpid/',
     img: '167b51e4c6836708d02afe8fe7a312e0-cc_ft_768.webp',
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -535,7 +535,7 @@ export const initialHomeSites: HomeSite[] = [
   {
     id: 41,
     name: '3069 Poe Rd, Soddy Daisy, TN 37379',
-    price: '$699,000',
+    price: '$687,000',
     bedrooms: 4,
     bathrooms: 4,
     sqft: '2,932',
@@ -561,12 +561,12 @@ export const initialHomeSites: HomeSite[] = [
   {
     "id": 43,
     "name": "3057 Poe Rd, Soddy Daisy, TN 37379",
-    "price": "$650,000",
+    "price": "$676,281",
     "bedrooms": 3,
     "bathrooms": 4,
     "sqft": "2,274",
     "lot": "1.07 acres",
-    "status": "Home Available",
+    "status": "Sold",
     "url": "https://www.zillow.com/homedetails/3057-Poe-Rd-Soddy-Daisy-TN-37379/449944467_zpid/",
     "img": "7300ecf71e33b36c66409fa7143b6c28-cc_ft_768.webp",
     "contact": "https://www.lambproperties.com/"
@@ -665,7 +665,7 @@ export const initialHomeSites: HomeSite[] = [
   {
     id: 51,
     name: '3009 Poe Rd, Soddy Daisy, TN 37379',
-    price: '$689,000',
+    price: '$675,000',
     bedrooms: 4,
     bathrooms: 4,
     sqft: '2,503',

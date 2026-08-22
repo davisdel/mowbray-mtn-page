@@ -153,7 +153,7 @@ export default function LocationPage() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className='h-96 bg-subtle-gradient rounded-lg flex items-center justify-center relative overflow-hidden'>
+              <div className='h-[32rem] md:h-[40rem] bg-subtle-gradient rounded-lg flex items-center justify-center relative overflow-hidden'>
                 <iframe
                   src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4206.659724158415!2d-85.27040432338849!3d35.286873672717206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88608d4e2608c497%3A0x8af8b7c1f23cf6ee!2s3009%20Poe%20Rd%2C%20Soddy-Daisy%2C%20TN%2037379!5e1!3m2!1sen!2sus!4v1753882328966!5m2!1sen!2sus'
                   width='100%'
