@@ -82,16 +82,16 @@ export const initialHomeSites: HomeSite[] = [
   },
   {
     "id": 6,
-    "name": "Lot 6",
-    "price": "$95,000",
-    "bedrooms": null,
-    "bathrooms": null,
-    "sqft": null,
+    "name": "2780 Mowbray Pike, Soddy Daisy, TN 37379",
+    "price": "$679,000",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "sqft": "2,627",
     "lot": "1.61 acres",
-    "status": "Sold",
-    url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
-    "img": "lot 6.gif",
-    contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
+    "status": "Home Available",
+    url: 'https://www.zillow.com/homedetails/2780-Mowbray-Pike-Soddy-Daisy-TN-37379/449944656_zpid/',
+    "img": "c5cb25b8c132ba6cb4280df121beadd6-cc_ft_768.webp",
+    contact: 'https://uptownfirm.com/'
   },
   {
     "id": 7,
@@ -101,7 +101,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.12 acres",
-    "status": "Sold",
+    "status": "Home Available",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
     "img": "530236652-6b0d1993-5fc7-47b7-bffb-b57486b8dd8c.webp",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -114,7 +114,7 @@ export const initialHomeSites: HomeSite[] = [
     bathrooms: 3,
     sqft: '2,481',
     lot: '1.12 acre',
-    status: 'Pending',
+    status: 'Sold',
     url: 'https://www.zillow.com/homedetails/2796-Mowbray-Pike-Soddy-Daisy-TN-37379/449944466_zpid/',
     img: '16109e525ab87371b4fe844586109ba0-cc_ft_768.webp',
     contact: 'https://homesrep.com/agent/mark-blazek'
@@ -127,7 +127,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.07 acres",
-    "status": "Lot Available",
+    "status": "Sold",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
     "img": "lot 9.gif",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -186,16 +186,16 @@ export const initialHomeSites: HomeSite[] = [
   },
   {
     "id": 14,
-    "name": "Lot 14",
-    "price": "$75,000",
-    "bedrooms": null,
-    "bathrooms": null,
-    "sqft": null,
-    "lot": "0.77 acres",
+    "name": "2844 Mowbray Pike, Soddy Daisy, TN 37379",
+    "price": "$645,000",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "sqft": "2,341",
+    "lot": "0.75 acres",
     "status": "Home Available",
-    url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
-    "img": "",
-    contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
+    url: 'https://www.zillow.com/homedetails/2844-Mowbray-Pike-Soddy-Daisy-TN-37379/449944452_zpid/',
+    "img": "a5c89415ea1c8b76ce30246b8baaec68-cc_ft_768.webp",
+    contact: 'https://homesrep.com/agent/mark-blazek'
   },
   {
     "id": 15,
@@ -218,22 +218,22 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.04 acres",
-    "status": "Lot Available",
+    "status": "Sold",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
     "img": "lot 16.gif",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
   },
   {
     "id": 17,
-    "name": "Lot 17",
-    "price": "$60,000",
-    "bedrooms": null,
-    "bathrooms": null,
-    "sqft": null,
-    "lot": "0.48 acres",
-    "status": "Lot Available",
-    url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
-    "img": "lot 17.gif",
+    "name": "2868 Mowbray Pike, Soddy Daisy, TN 37379",
+    "price": "$725,000",
+    "bedrooms": 3,
+    "bathrooms": 4,
+    "sqft": "2,730",
+    "lot": "0.55 acres",
+    "status": "Home Available",
+    url: 'https://www.zillow.com/homedetails/2868-Mowbray-Pike-Soddy-Daisy-TN-37379/449944448_zpid/',
+    "img": "cced400720446ea3ada00618a83d6ef5-cc_ft_768.webp",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
   },
   {
@@ -244,21 +244,21 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.12 acres",
-    "status": "Lot Available",
+    "status": "Sold",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
     "img": "lot 18.gif",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
   },
   {
     "id": 19,
-    "name": "Lot 19",
-    "price": "$70,000",
+    "name": "2884 Mowbray Pike, Soddy Daisy, TN 37379",
+    "price": "$595,000",
     "bedrooms": null,
     "bathrooms": null,
     "sqft": null,
     "lot": "0.56 acres",
     "status": "Sold",
-    url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
+    url: 'https://www.zillow.com/homedetails/2884-Mowbray-Pike-Soddy-Daisy-TN-37379/449944660_zpid/',
     "img": "",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
   },
@@ -335,7 +335,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.65 acres",
-    "status": "Lot Available",
+    "status": "Sold",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
     "img": "lot 25.gif",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -348,7 +348,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.9 acres",
-    "status": "Lot Available",
+    "status": "Sold",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
     "img": "lot 26.gif",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -361,7 +361,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.97 acres",
-    "status": "Lot Available",
+    "status": "Sold",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
     "img": "lot 27.gif",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -374,7 +374,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.97 acres",
-    "status": "Lot Available",
+    "status": "Sold",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
     "img": "lot 28.gif",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -452,7 +452,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.61 acres",
-    "status": "Lot Available",
+    "status": "Sold",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
     "img": "lot 34.gif",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -465,7 +465,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.61 acres",
-    "status": "Lot Available",
+    "status": "Sold",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
     "img": "lot 35.gif",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -478,7 +478,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "0.62 acres",
-    "status": "Lot Available",
+    "status": "Sold",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
     "img": "lot 36.gif",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
@@ -493,7 +493,7 @@ export const initialHomeSites: HomeSite[] = [
     "lot": "1.12 acres",
     "status": "Sold",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
-    "img": "",
+    "img": "03154b5f-64ef-4827-bbd3-cebd2c5e1893.webp",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
   },
   {
@@ -519,17 +519,20 @@ export const initialHomeSites: HomeSite[] = [
     "lot": "1.11 acres",
     "status": "Sold",
     url: 'https://www.zillow.com/homedetails/3081-Poe-Rd-Soddy-Daisy-TN-37379/449944370_zpid/',
-    "img": "",
+    "img": "c3447c4ede1f5169c58ca694240fef3f-cc_ft_768.webp",
     "contact": "https://www.lambproperties.com/"
   },
   {
     id: 40,
     name: '3075 Poe Rd, Soddy Daisy, TN 37379',
     price: '$775,000',
-    lot: '1.17 acre',
+    bedrooms: 4,
+    bathrooms: 4,
+    sqft: '3,181',
+    lot: '1.18 acre',
     status: 'Home Available',
     url: 'https://www.zillow.com/homedetails/3075-Poe-Rd-Soddy-Daisy-TN-37379/449944369_zpid/',
-    img: '167b51e4c6836708d02afe8fe7a312e0-cc_ft_768.webp',
+    img: '048e9c328bdd813532b04f0a4b4a8295-cc_ft_768.webp',
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
   },
   {
@@ -657,7 +660,7 @@ export const initialHomeSites: HomeSite[] = [
     "bathrooms": null,
     "sqft": null,
     "lot": "1.16 acres",
-    "status": "Sold",
+    "status": "Home Available",
     url: 'https://kw.com/agent/Cheryl-Fuqua/119107',
     "img": "lot 50.gif",
     contact: 'https://kw.com/agent/Cheryl-Fuqua/119107'
